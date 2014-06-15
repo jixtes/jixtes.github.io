@@ -70,7 +70,7 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
         scoreB: 3
       },
       prediction: {
-        moe: {teamA: 3, teamB: 1}
+        eyassu: {teamA: 3, teamB: 1}
       }
     },
 
