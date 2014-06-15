@@ -4,7 +4,6 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
   $scope.players = {
     eyassu: 0,
     joey: 0,
-    kaleb: 0,
     moe: 0
   }
 
