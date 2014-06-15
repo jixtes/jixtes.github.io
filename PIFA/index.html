@@ -65,22 +65,60 @@
         <thead>
           <tr>
             <th>Player</th>
+            <th>Spot On</th>
+            <th>Correct</th>
+            <th>Wrong</th>
+            <th>Forfeit</th>
             <th>PTS</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <td>Eyassu</td>
-            <td>{{ players.eyassu }}</td>
+          <tr ng-repeat="player in playersList | orderBy:'stat.PTS':true">
+            <td ng-bind="player.name"></td>
+            <td ng-bind="player.stat.spotOn"></td>
+            <td ng-bind="player.stat.right"></td>
+            <td ng-bind="player.stat.wrong"></td>
+            <td ng-bind="player.stat.forfeit"></td>
+            <td ng-bind="player.stat.PTS"></td>
           </tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <table class="table table-bordered">
+        <thead>
           <tr>
-            <td>Joey</td>
-            <td>{{ players.joey }}</td>
+            <th class="text-muted">PREDICTION</th>
+            <th>Eyassu</th>
+            <th>Joey</th>
+            <th>Kaleb</th>
+            <th>Moe</th>
           </tr>
-          <tr>
-            <td>Moe</td>
-            <td>{{ players.moe }}</td>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="prediction in nextPredictions">
+            <td>
+              {{ prediction.match.teamA }}&nbsp;&nbsp;<span class="text-muted">vs</span>&nbsp;&nbsp;{{ prediction.match.teamB }}
+            </td>
+
+            <td>
+              {{ prediction.prediction.eyassu.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ prediction.prediction.eyassu.teamB }}
+            </td>
+
+            <td>
+              {{ prediction.prediction.joey.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ prediction.prediction.joey.teamB }}
+            </td>
+
+            <td>
+              {{ prediction.prediction.kaleb.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ prediction.prediction.kaleb.teamB }}
+            </td>
+
+            <td>
+              {{ prediction.prediction.moe.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ prediction.prediction.moe.teamB }}
+            </td>
           </tr>
         </tbody>
       </table>
@@ -96,6 +134,7 @@
                 <th class="text-muted">MATCH</th>
                 <th>Eyassu</th>
                 <th>Joey</th>
+                <th>Kaleb</th>
                 <th>Moe</th>
               </tr>
             </thead>
@@ -116,6 +155,11 @@
                 <td>
                   {{ match.prediction.joey.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ match.prediction.joey.teamB }}<br>
                   <span class="text-muted">{{ match.pts.joey }}</span>
+                </td>
+
+                <td>
+                  {{ match.prediction.kaleb.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ match.prediction.kaleb.teamB }}<br>
+                  <span class="text-muted">{{ match.pts.kaleb }}</span>
                 </td>
 
                 <td>
