@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" name="viewport">
+    <meta content="PIFA" name="apple-mobile-web-app-title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="keywords" content="REAL PIFA" />
+    <meta name="description" content="A league of prediction" />
+    <meta name="robots" content="index, follow" />
+
+    <title>PIFA</title>
+
+    <link rel="stylesheet" href="assets/bs3/css/bootstrap.min.css">
+    <style>
+      body {
+        font-size: 12px;
+      }
+
+      th, td {
+        text-align: center;
+      }
+
+      .mb0 {
+        margin-bottom: 0px;
+      }
+
+      .mt0 {
+        margin-top: 0px;
+      }
+    </style>
+  </head>
+
+  <body ng-app="PIFA" ng-controller="PIFACtrl">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h4 class="text-muted text-center">PIFA</h4>
+
+          <hr>
+
+          <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+              <p class="mt0 mb0">SPOT-ON prediction</p>
+              <p class="mt0 mb0">Winning side prediction</p>
+              <p class="mt0 mb0">Wrong prediction</p>
+              <p class="mt0 mb0">Forfeit prediction</p>
+            </div>
+
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+              <p class="mt0 mb0"><strong class="text-success">3</strong> PTS</p>
+              <p class="mt0 mb0"><strong class="text-primary">1</strong> PT</p>
+              <p class="mt0 mb0"><strong class="text-danger">-1</strong> PT</p>
+              <p class="mt0 mb0"><strong class="text-danger">-2</strong> PT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>PTS</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Eyassu</td>
+            <td>{{ players.eyassu }}</td>
+          </tr>
+          <tr>
+            <td>Joey</td>
+            <td>{{ players.joey }}</td>
+          </tr>
+          <tr>
+            <td>Kaleb</td>
+            <td>{{ players.kaleb }}</td>
+          </tr>
+          <tr>
+            <td>Moe</td>
+            <td>{{ players.moe }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+          <table class="table table-condensed table-bordered">
+            <thead>
+              <tr>
+                <th class="text-muted">MATCH</th>
+                <th>Eyassu</th>
+                <th>Joey</th>
+                <th>Kaleb</th>
+                <th>Moe</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr ng-repeat="match in matches">
+                <td>
+                  {{ match.match.teamA }}&nbsp;&nbsp;<span class="text-muted">vs</span>&nbsp;&nbsp;{{ match.match.teamB }}<br>
+                  <span class="text-muted">{{ match.match.scoreA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ match.match.scoreB }}</span>
+                </td>
+
+                <td>
+                  {{ match.prediction.eyassu.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ match.prediction.eyassu.teamB }}<br>
+                  <span class="text-muted">{{ match.pts.eyassu }}</span>
+                </td>
+
+                <td>
+                  {{ match.prediction.joey.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ match.prediction.joey.teamB }}<br>
+                  <span class="text-muted">{{ match.pts.joey }}</span>
+                </td>
+
+                <td>
+                  {{ match.prediction.kaleb.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ match.prediction.kaleb.teamB }}<br>
+                  <span class="text-muted">{{ match.pts.kaleb }}</span>
+                </td>
+
+                <td>
+                  {{ match.prediction.moe.teamA }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ match.prediction.moe.teamB }}<br>
+                  <span class="text-muted">{{ match.pts.moe }}</span>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center">
+      <small class="text-muted">&copy; 2014, PIFA (patent pending)</small>
+    </footer>
+
+    <script src="assets/angular/angular.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
