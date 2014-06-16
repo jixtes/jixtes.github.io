@@ -263,7 +263,7 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
       match: {
         teamA: 'GHA',
         scoreA: 0,
-        teamB: 'USAX',
+        teamB: 'USA',
         scoreB: 0
       },
       prediction: {
