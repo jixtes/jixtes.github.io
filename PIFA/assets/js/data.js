@@ -213,10 +213,8 @@ var PIFA = {
         joey: {teamA: 1, teamB: 1},
         moe: {teamA: 1, teamB: 2},
         eyassu: {teamA: 2, teamB: 2},
-        yoseph: {teamA: 1, teamB: 2}
-        /*
+        yoseph: {teamA: 1, teamB: 2},
         kaleb: {teamA: 0, teamB: 0}
-        */
       }
     },
 
@@ -231,10 +229,8 @@ var PIFA = {
         joey: {teamA: 2, teamB: 2},
         moe: {teamA: 2, teamB: 1},
         eyassu: {teamA: 1, teamB: 1},
-        yoseph: {teamA: 1, teamB: 1}
-        /*
-        kaleb: {teamA: 0, teamB: 0}
-        */
+        yoseph: {teamA: 1, teamB: 1},
+        kaleb: {teamA: 1, teamB: 1}
       }
     }
   ]
