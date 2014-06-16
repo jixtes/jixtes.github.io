@@ -18,10 +18,27 @@
     <style>
       body {
         font-size: 12px;
+        color: #666666;
       }
 
       th, td {
         text-align: center;
+      }
+
+      td.spot-on {
+        background-color: rgba(46, 204, 113, 0.5);
+      }
+
+      td.win {
+        background-color: rgba(52, 152, 219, 0.5);
+      }
+
+      td.lose {
+        background-color: rgba(231, 76, 60, 0.5);
+      }
+
+      td.forfeit {
+        background-color: rgba(243, 156, 18, 0.5);
       }
 
       .mb0 {
@@ -39,7 +56,7 @@
 
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h4 class="text-muted text-center">PIFA</h4>
+          <h1 class="text-muted text-center">PIFA</h1>
         </div>
       </div>
 
@@ -68,7 +85,7 @@
       <!-- STAT -->
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <table class="table table-bordered">
+          <table class="table table-condensed table-bordered">
             <thead>
               <tr>
                 <th>Player</th>
@@ -160,22 +177,22 @@
                   <span class="text-muted"><span ng-bind="match.match.scoreA"></span>&nbsp;&nbsp;-&nbsp;&nbsp;<span ng-bind="match.match.scoreB"></span></span>
                 </td>
 
-                <td>
+                <td ng-class="{'spot-on': match.pts.eyassu === 3, 'win': match.pts.eyassu === 1, 'lose': match.pts.eyassu === -1, 'forfeit': match.pts.eyassu === -2}">
                   <span ng-bind="match.prediction.eyassu.teamA"></span>&nbsp;&nbsp;-&nbsp;&nbsp;<span ng-bind="match.prediction.eyassu.teamB"></span><br>
                   <span class="text-muted" ng-bind="match.pts.eyassu"></span>
                 </td>
 
-                <td>
+                <td ng-class="{'spot-on': match.pts.joey === 3, 'win': match.pts.joey === 1, 'lose': match.pts.joey === -1, 'forfeit': match.pts.joey === -2}">
                   <span ng-bind="match.prediction.joey.teamA"></span>&nbsp;&nbsp;-&nbsp;&nbsp;<span ng-bind="match.prediction.joey.teamB"></span><br>
                   <span class="text-muted" ng-bind="match.pts.joey"></span>
                 </td>
 
-                <td>
+                <td ng-class="{'spot-on': match.pts.kaleb === 3, 'win': match.pts.kaleb === 1, 'lose': match.pts.kaleb === -1, 'forfeit': match.pts.kaleb === -2}">
                   <span ng-bind="match.prediction.kaleb.teamA"></span>&nbsp;&nbsp;-&nbsp;&nbsp;<span ng-bind="match.prediction.kaleb.teamB"></span><br>
                   <span class="text-muted" ng-bind="match.pts.kaleb"></span>
                 </td>
 
-                <td>
+                <td ng-class="{'spot-on': match.pts.moe === 3, 'win': match.pts.moe === 1, 'lose': match.pts.moe === -1, 'forfeit': match.pts.moe === -2}">
                   <span ng-bind="match.prediction.moe.teamA"></span>&nbsp;&nbsp;-&nbsp;&nbsp;<span ng-bind="match.prediction.moe.teamB"></span><br>
                   <span class="text-muted" ng-bind="match.pts.moe"></span>
                 </td>
