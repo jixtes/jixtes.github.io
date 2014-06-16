@@ -199,9 +199,6 @@ var PIFA = {
         moe: {teamA: 2, teamB: 1},
         eyassu: {teamA: 1, teamB: 0},
         yoseph: {teamA: 2, teamB: 2}
-        /*
-        kaleb: {teamA: 0, teamB: 0}
-        */
       }
     },
 
