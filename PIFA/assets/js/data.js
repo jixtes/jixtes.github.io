@@ -195,6 +195,7 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
+        joey: {teamA: 3, teamB: 1}
         /*
         joey: {teamA: 0, teamB: 0},
         moe: {teamA: 0, teamB: 0},
@@ -213,6 +214,7 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
+        joey: {teamA: 1, teamB: 1}
         /*
         joey: {teamA: 0, teamB: 0},
         moe: {teamA: 0, teamB: 0},
@@ -231,11 +233,13 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
-        joey: {teamA: 0, teamB: 0},
+        joey: {teamA: 2, teamB: 2}
+        /*
         moe: {teamA: 0, teamB: 0},
         eyassu: {teamA: 0, teamB: 0},
         kaleb: {teamA: 0, teamB: 0},
         yoseph: {teamA: 0, teamB: 0}
+        */
       }
     }
   ]
