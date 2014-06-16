@@ -233,7 +233,7 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
-        joey: {teamA: 2, teamB: 2}
+        joey: {teamA: 3, teamB: 3}
         /*
         moe: {teamA: 0, teamB: 0},
         eyassu: {teamA: 0, teamB: 0},
