@@ -37,6 +37,13 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
       wrong: 0,
       forfeit: 0,
       PTS: 0
+    },
+    yoseph: {
+      spotOn: 0,
+      right: 0,
+      wrong: 0,
+      forfeit: 0,
+      PTS: 0
     }
   };
 

@@ -124,6 +124,7 @@
                 <th>Joey</th>
                 <th>Kaleb</th>
                 <th>Moe</th>
+                <th>Yoseph</th>
               </tr>
             </thead>
 
@@ -148,6 +149,10 @@
                 <td>
                   <span ng-bind="prediction.prediction.moe.teamA"></span>&nbsp;&nbsp;-&nbsp;&nbsp;<span ng-bind="prediction.prediction.moe.teamB"></span>
                 </td>
+
+                <td>
+                  <span ng-bind="prediction.prediction.yoseph.teamA"></span>&nbsp;&nbsp;-&nbsp;&nbsp;<span ng-bind="prediction.prediction.yoseph.teamB"></span>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -167,6 +172,7 @@
                 <th>Joey</th>
                 <th>Kaleb</th>
                 <th>Moe</th>
+                <th>Yoseph</th>
               </tr>
             </thead>
 
@@ -195,6 +201,11 @@
                 <td ng-class="{'spot-on': match.pts.moe === 3, 'win': match.pts.moe === 1, 'lose': match.pts.moe === -1, 'forfeit': match.pts.moe === -2}">
                   <span ng-bind="match.prediction.moe.teamA"></span>&nbsp;&nbsp;-&nbsp;&nbsp;<span ng-bind="match.prediction.moe.teamB"></span><br>
                   <span class="text-muted" ng-bind="match.pts.moe"></span>
+                </td>
+
+                <td ng-class="{'spot-on': match.pts.yoseph === 3, 'win': match.pts.yoseph === 1, 'lose': match.pts.yoseph === -1, 'forfeit': match.pts.yoseph === -2}">
+                  <span ng-bind="match.prediction.yoseph.teamA"></span>&nbsp;&nbsp;-&nbsp;&nbsp;<span ng-bind="match.prediction.yoseph.teamB"></span><br>
+                  <span class="text-muted" ng-bind="match.pts.yoseph"></span>
                 </td>
               </tr>
             </tbody>
