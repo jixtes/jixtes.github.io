@@ -217,7 +217,7 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
   }
 
   // calculating ranking...
-  // it'll be `easier` to do it this way - I've don't deserve to use Angular
+  // it'll be `easier` to do it this way - i don't deserve to use Angular
   // forgiveness, please
   $scope.playersList = [];
   for (player in $scope.players) {
