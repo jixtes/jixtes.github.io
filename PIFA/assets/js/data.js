@@ -196,11 +196,9 @@ var PIFA = {
       },
       prediction: {
         joey: {teamA: 3, teamB: 1},
-        moe: {teamA: 2, teamB: 1}
+        moe: {teamA: 2, teamB: 1},
+        eyassu: {teamA: 1, teamB: 0}
         /*
-        joey: {teamA: 0, teamB: 0},
-        moe: {teamA: 0, teamB: 0},
-        eyassu: {teamA: 0, teamB: 0},
         kaleb: {teamA: 0, teamB: 0},
         yoseph: {teamA: 0, teamB: 0}
         */
@@ -216,11 +214,9 @@ var PIFA = {
       },
       prediction: {
         joey: {teamA: 1, teamB: 1},
-        moe: {teamA: 1, teamB: 2}
+        moe: {teamA: 1, teamB: 2},
+        eyassu: {teamA: 2, teamB: 2}
         /*
-        joey: {teamA: 0, teamB: 0},
-        moe: {teamA: 0, teamB: 0},
-        eyassu: {teamA: 0, teamB: 0},
         kaleb: {teamA: 0, teamB: 0},
         yoseph: {teamA: 0, teamB: 0}
         */
@@ -236,10 +232,9 @@ var PIFA = {
       },
       prediction: {
         joey: {teamA: 2, teamB: 2},
-        moe: {teamA: 2, teamB: 1}
+        moe: {teamA: 2, teamB: 1},
+        eyassu: {teamA: 1, teamB: 1}
         /*
-        moe: {teamA: 0, teamB: 0},
-        eyassu: {teamA: 0, teamB: 0},
         kaleb: {teamA: 0, teamB: 0},
         yoseph: {teamA: 0, teamB: 0}
         */
