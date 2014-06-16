@@ -9,181 +9,9 @@ window.addEventListener('load', function (e) {
 var app = angular.module('PIFA', []);
 
 app.controller('PIFACtrl', ['$scope', function ($scope) {
-  $scope.players = {
-    eyassu: {
-      spotOn: 0,
-      right: 0,
-      wrong: 0,
-      forfeit: 0,
-      PTS: 0
-    },
-    joey: {
-      spotOn: 0,
-      right: 0,
-      wrong: 0,
-      forfeit: 0,
-      PTS: 0
-    },
-    kaleb: {
-      spotOn: 0,
-      right: 0,
-      wrong: 0,
-      forfeit: 0,
-      PTS: 0
-    },
-    moe: {
-      spotOn: 0,
-      right: 0,
-      wrong: 0,
-      forfeit: 0,
-      PTS: 0
-    },
-    yoseph: {
-      spotOn: 0,
-      right: 0,
-      wrong: 0,
-      forfeit: 0,
-      PTS: 0
-    }
-  };
-
-  $scope.matches = [
-    {
-      match: {
-        teamA: 'BRA',
-        scoreA: 3,
-        teamB: 'CRO',
-        scoreB: 1
-      },
-      prediction: {}
-    },
-
-    {
-      match: {
-        teamA: 'MEX',
-        scoreA: 1,
-        teamB: 'CAM',
-        scoreB: 0
-      },
-      prediction: {}
-    },
-
-    {
-      match: {
-        teamA: 'SPA',
-        scoreA: 1,
-        teamB: 'NET',
-        scoreB: 5
-      },
-      prediction: {}
-    },
-
-    {
-      match: {
-        teamA: 'CHI',
-        scoreA: 3,
-        teamB: 'AUS',
-        scoreB: 1
-      },
-      prediction: {}
-    },
-
-    {
-      match: {
-        teamA: 'COL',
-        scoreA: 3,
-        teamB: 'GRE',
-        scoreB: 0
-      },
-      prediction: {
-        joey: {teamA: 1, teamB: 0},
-        moe: {teamA: 1, teamB: 1}
-      }
-    },
-
-    {
-      match: {
-        teamA: 'URU',
-        scoreA: 1,
-        teamB: 'COS',
-        scoreB: 3
-      },
-      prediction: {
-        eyassu: {teamA: 3, teamB: 1}
-      }
-    },
-
-    {
-      match: {
-        teamA: 'ENG',
-        scoreA: 1,
-        teamB: 'ITA',
-        scoreB: 2
-      },
-      prediction: {
-        joey: {teamA: 1, teamB: 2},
-        eyassu: {teamA: 2, teamB: 1},
-        moe: {teamA: 4, teamB: 2}
-      }
-    },
-
-    {
-      match: {
-        teamA: 'COT',
-        scoreA: 2,
-        teamB: 'JAP',
-        scoreB: 1
-      },
-      prediction: {
-        moe: {teamA: 0, teamB: 2}
-      }
-    },
-
-    {
-      match: {
-        teamA: 'SWI',
-        scoreA: 2,
-        teamB: 'ECU',
-        scoreB: 1
-      },
-      prediction: {
-        joey: {teamA: 1, teamB: 3},
-        moe: {teamA: 0, teamB: 2},
-        eyassu: {teamA: 1, teamB: 1},
-        kaleb: {teamA: 2, teamB: 0},
-      }
-    },
-
-    {
-      match: {
-        teamA: 'FRA',
-        scoreA: 3,
-        teamB: 'HON',
-        scoreB: 0
-      },
-      prediction: {
-        joey: {teamA: 1, teamB: 0},
-        moe: {teamA: 3, teamB: 0},
-        eyassu: {teamA: 2, teamB: 1},
-        kaleb: {teamA: 2, teamB: 1}
-      }
-    },
-
-    {
-      match: {
-        teamA: 'ARG',
-        scoreA: 2,
-        teamB: 'BOS',
-        scoreB: 1
-      },
-      prediction: {
-        joey: {teamA: 4, teamB: 2},
-        moe: {teamA: 4, teamB: 1},
-        eyassu: {teamA: 3, teamB: 1},
-        kaleb: {teamA: 2, teamB: 0}
-      }
-    }
-  ];
+  $scope.players = PIFA.players;
+  $scope.matches = PIFA.matches;
+  $scope.nextPredictions = PIFA.predictions;
 
   // this is where the `magic` happens
   for (match in $scope.matches) {
@@ -209,9 +37,17 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
 
       // side prediction
       else if (($scope.matches[match].match.scoreA > $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA > $scope.matches[match].prediction[player].teamB)) {
-        $scope.players[player].PTS += 1;
-        $scope.players[player].right++;
-        $scope.matches[match].pts[player] = 1;
+        // goal difference
+        if (($scope.matches[match].match.scoreA - $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA - $scope.matches[match].prediction[player].teamB)) {
+          console.log('goal difference');
+          $scope.players[player].PTS += 2;
+          $scope.players[player].gd++;
+          $scope.matches[match].pts[player] = 2;
+        } else {
+          $scope.players[player].PTS += 1;
+          $scope.players[player].right++;
+          $scope.matches[match].pts[player] = 1;
+        }
       }
 
       // wrong prediction
@@ -230,58 +66,4 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
   for (player in $scope.players) {
     $scope.playersList.push({name: player, stat: $scope.players[player]});
   };
-
-  $scope.nextPredictions = [
-    {
-      match: {
-        teamA: 'GER',
-        scoreA: 0,
-        teamB: 'POR',
-        scoreB: 0
-      },
-      prediction: {
-        /*
-        joey: {teamA: 4, teamB: 2},
-        moe: {teamA: 4, teamB: 1},
-        eyassu: {teamA: 3, teamB: 1},
-        kaleb: {teamA: 2, teamB: 0}
-        */
-      }
-    },
-
-    {
-      match: {
-        teamA: 'IRA',
-        scoreA: 0,
-        teamB: 'NIG',
-        scoreB: 0
-      },
-      prediction: {
-        /*
-        joey: {teamA: 4, teamB: 2},
-        moe: {teamA: 4, teamB: 1},
-        eyassu: {teamA: 3, teamB: 1},
-        kaleb: {teamA: 2, teamB: 0}
-        */
-      }
-    },
-
-    {
-      match: {
-        teamA: 'GHA',
-        scoreA: 0,
-        teamB: 'USA',
-        scoreB: 0
-      },
-      prediction: {
-        /*
-        joey: {teamA: 4, teamB: 2},
-        moe: {teamA: 4, teamB: 1},
-        eyassu: {teamA: 3, teamB: 1},
-        kaleb: {teamA: 2, teamB: 0}
-        */
-      }
-    }
-  ];
-
 }]);
