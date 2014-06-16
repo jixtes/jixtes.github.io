@@ -122,6 +122,51 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
       prediction: {
         moe: {teamA: 0, teamB: 2}
       }
+    },
+
+    {
+      match: {
+        teamA: 'SWI',
+        scoreA: 2,
+        teamB: 'ECU',
+        scoreB: 1
+      },
+      prediction: {
+        joey: {teamA: 1, teamB: 3},
+        moe: {teamA: 0, teamB: 2},
+        eyassu: {teamA: 1, teamB: 1},
+        kaleb: {teamA: 2, teamB: 0},
+      }
+    },
+
+    {
+      match: {
+        teamA: 'FRA',
+        scoreA: 3,
+        teamB: 'HON',
+        scoreB: 0
+      },
+      prediction: {
+        joey: {teamA: 1, teamB: 0},
+        moe: {teamA: 3, teamB: 0},
+        eyassu: {teamA: 2, teamB: 1},
+        kaleb: {teamA: 2, teamB: 1}
+      }
+    },
+
+    {
+      match: {
+        teamA: 'ARG',
+        scoreA: 2,
+        teamB: 'BOS',
+        scoreB: 1
+      },
+      prediction: {
+        joey: {teamA: 4, teamB: 2},
+        moe: {teamA: 4, teamB: 1},
+        eyassu: {teamA: 3, teamB: 1},
+        kaleb: {teamA: 2, teamB: 0}
+      }
     }
   ];
 
@@ -174,46 +219,52 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
   $scope.nextPredictions = [
     {
       match: {
-        teamA: 'SWI',
+        teamA: 'GER',
         scoreA: 0,
-        teamB: 'ECU',
+        teamB: 'POR',
         scoreB: 0
       },
       prediction: {
-        joey: {teamA: 1, teamB: 3},
-        moe: {teamA: 0, teamB: 2},
-        eyassu: {teamA: 1, teamB: 1},
-        kaleb: {teamA: 2, teamB: 0},
-      }
-    },
-
-    {
-      match: {
-        teamA: 'FRA',
-        scoreA: 0,
-        teamB: 'HON',
-        scoreB: 0
-      },
-      prediction: {
-        joey: {teamA: 1, teamB: 0},
-        moe: {teamA: 3, teamB: 0},
-        eyassu: {teamA: 2, teamB: 1},
-        kaleb: {teamA: 2, teamB: 1}
-      }
-    },
-
-    {
-      match: {
-        teamA: 'ARG',
-        scoreA: 0,
-        teamB: 'BOS',
-        scoreB: 0
-      },
-      prediction: {
+        /*
         joey: {teamA: 4, teamB: 2},
         moe: {teamA: 4, teamB: 1},
         eyassu: {teamA: 3, teamB: 1},
         kaleb: {teamA: 2, teamB: 0}
+        */
+      }
+    },
+
+    {
+      match: {
+        teamA: 'IRA',
+        scoreA: 0,
+        teamB: 'NIG',
+        scoreB: 0
+      },
+      prediction: {
+        /*
+        joey: {teamA: 4, teamB: 2},
+        moe: {teamA: 4, teamB: 1},
+        eyassu: {teamA: 3, teamB: 1},
+        kaleb: {teamA: 2, teamB: 0}
+        */
+      }
+    },
+
+    {
+      match: {
+        teamA: 'GHA',
+        scoreA: 0,
+        teamB: 'USA',
+        scoreB: 0
+      },
+      prediction: {
+        /*
+        joey: {teamA: 4, teamB: 2},
+        moe: {teamA: 4, teamB: 1},
+        eyassu: {teamA: 3, teamB: 1},
+        kaleb: {teamA: 2, teamB: 0}
+        */
       }
     }
   ];
