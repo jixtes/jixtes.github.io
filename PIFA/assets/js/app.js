@@ -42,7 +42,6 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
       ) {
         // goal difference
         if (($scope.matches[match].match.scoreA - $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA - $scope.matches[match].prediction[player].teamB)) {
-          console.log('goal difference');
           $scope.players[player].PTS += 2;
           $scope.players[player].gd++;
           $scope.matches[match].pts[player] = 2;

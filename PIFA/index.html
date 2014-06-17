@@ -114,7 +114,7 @@
             </thead>
 
             <tbody>
-              <tr ng-repeat="player in playersList | orderBy:'stat.PTS':true">
+              <tr ng-repeat="player in playersList | orderBy:'stat.forfeit':false | orderBy:'stat.wrong':false | orderBy:'stat.right':true | orderBy:'stat.gd':true | orderBy:'stat.spotOn':true | orderBy:'stat.PTS':true">
                 <td ng-bind="player.name"></td>
                 <td ng-bind="player.stat.spotOn"></td>
                 <td ng-bind="player.stat.gd"></td>
