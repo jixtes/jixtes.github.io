@@ -36,7 +36,10 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
       }
 
       // side prediction
-      else if (($scope.matches[match].match.scoreA > $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA > $scope.matches[match].prediction[player].teamB)) {
+      else if (
+          ($scope.matches[match].match.scoreA > $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA > $scope.matches[match].prediction[player].teamB) &&
+          ($scope.matches[match].match.scoreA < $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA < $scope.matches[match].prediction[player].teamB)
+      ) {
         // goal difference
         if (($scope.matches[match].match.scoreA - $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA - $scope.matches[match].prediction[player].teamB)) {
           console.log('goal difference');

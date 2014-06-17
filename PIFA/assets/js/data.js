@@ -181,16 +181,12 @@ var PIFA = {
         kaleb: {teamA: 2, teamB: 0},
         yoseph: {teamA: 5, teamB: 0}
       }
-    }
-  ],
+    },
 
-
-
-  predictions: [
     {
       match: {
         teamA: 'GER',
-        scoreA: 0,
+        scoreA: 4,
         teamB: 'POR',
         scoreB: 0
       },
@@ -221,9 +217,9 @@ var PIFA = {
     {
       match: {
         teamA: 'GHA',
-        scoreA: 0,
+        scoreA: 1,
         teamB: 'USA',
-        scoreB: 0
+        scoreB: 2
       },
       prediction: {
         joey: {teamA: 2, teamB: 2},
@@ -231,6 +227,63 @@ var PIFA = {
         eyassu: {teamA: 1, teamB: 1},
         yoseph: {teamA: 1, teamB: 1},
         kaleb: {teamA: 1, teamB: 1}
+      }
+    }
+  ],
+
+
+
+  predictions: [
+    {
+      match: {
+        teamA: 'BEL',
+        scoreA: 0,
+        teamB: 'ALG',
+        scoreB: 0
+      },
+      prediction: {
+        /*
+        joey: {teamA: 3, teamB: 1},
+        moe: {teamA: 2, teamB: 1},
+        eyassu: {teamA: 1, teamB: 0},
+        yoseph: {teamA: 2, teamB: 2}
+        */
+      }
+    },
+
+    {
+      match: {
+        teamA: 'BRA',
+        scoreA: 0,
+        teamB: 'MEX',
+        scoreB: 0
+      },
+      prediction: {
+        /*
+        joey: {teamA: 1, teamB: 1},
+        moe: {teamA: 1, teamB: 2},
+        eyassu: {teamA: 2, teamB: 2},
+        yoseph: {teamA: 1, teamB: 2},
+        kaleb: {teamA: 0, teamB: 0}
+        */
+      }
+    },
+
+    {
+      match: {
+        teamA: 'RUS',
+        scoreA: 0,
+        teamB: 'KOR',
+        scoreB: 0
+      },
+      prediction: {
+        /*
+        joey: {teamA: 2, teamB: 2},
+        moe: {teamA: 2, teamB: 1},
+        eyassu: {teamA: 1, teamB: 1},
+        yoseph: {teamA: 1, teamB: 1},
+        kaleb: {teamA: 1, teamB: 1}
+        */
       }
     }
   ]
