@@ -253,6 +253,31 @@
                 </div>
               </p>
 
+              <!-- OG -->
+              <p class="list-group-item-text text-muted">
+                <div class="row" ng-hide="prediction.prediction.og === undefined">
+                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
+                    {{ prediction.prediction.og.teamA }}
+                  </div>
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                    <small class="text-muted">-</small>
+                  </div>
+
+                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
+                    <div class="row">
+                      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                        {{ prediction.prediction.og.teamB }}
+                      </div>
+
+                      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                        <span class="text-muted">OG</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </p>
+
               <!-- Yoseph -->
               <p class="list-group-item-text text-muted">
                 <div class="row" ng-hide="prediction.prediction.yoseph === undefined">
@@ -439,6 +464,40 @@
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                         <span class="text-muted">Moe</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </p>
+
+
+
+              <!-- OG -->
+              <p class="list-group-item-text text-muted">
+                <div class="row">
+                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
+                    {{ match.prediction.og.teamA }}
+                  </div>
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                    <small class="text-muted">-</small>
+                  </div>
+
+                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left">
+                        {{ match.prediction.og.teamB }}
+                      </div>
+
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
+                        ng-class="{'spot-on': match.pts.og === 3, 'gd': match.pts.og === 2, 'win': match.pts.og === 1, 'lose': match.pts.og === -1, 'forfeit': match.pts.og === -2}"
+                      >
+                        {{ match.pts.og }}
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                        <span class="text-muted">OG</span>
                       </div>
                     </div>
                   </div>

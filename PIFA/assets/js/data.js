@@ -32,6 +32,14 @@ var PIFA = {
       forfeit: 0,
       PTS: 0
     },
+    og: {
+      spotOn: 0,
+      gd: 0,
+      right: 0,
+      wrong: 0,
+      forfeit: 0,
+      PTS: 0
+    },
     yoseph: {
       spotOn: 0,
       gd: 0,
@@ -228,25 +236,22 @@ var PIFA = {
         yoseph: {teamA: 1, teamB: 1},
         kaleb: {teamA: 1, teamB: 1}
       }
-    }
-  ],
+    },
 
-
-
-  predictions: [
     {
       match: {
         teamA: 'BEL',
-        scoreA: 0,
+        scoreA: 2,
         teamB: 'ALG',
-        scoreB: 0
+        scoreB: 1
       },
       prediction: {
         moe: {teamA: 3, teamB: 1},
         joey: {teamA: 3, teamB: 0},
         yoseph: {teamA: 2, teamB: 0},
         kaleb: {teamA: 2, teamB: 0},
-        eyassu: {teamA: 2, teamB: 0}
+        eyassu: {teamA: 2, teamB: 0},
+        og: {teamA: 1, teamB: 1}
       }
     },
 
@@ -262,23 +267,83 @@ var PIFA = {
         joey: {teamA: 3, teamB: 1},
         yoseph: {teamA: 2, teamB: 1},
         eyassu: {teamA: 2, teamB: 1},
-        kaleb: {teamA: 4, teamB: 0}
+        kaleb: {teamA: 4, teamB: 0},
+        og: {teamA: 1, teamB: 1}
       }
     },
 
     {
       match: {
         teamA: 'RUS',
-        scoreA: 0,
+        scoreA: 1,
         teamB: 'KOR',
-        scoreB: 0
+        scoreB: 1
       },
       prediction: {
         moe: {teamA: 3, teamB: 0},
         joey: {teamA: 2, teamB: 0},
         yoseph: {teamA: 1, teamB: 1},
         eyassu: {teamA: 2, teamB: 0},
+        kaleb: {teamA: 2, teamB: 1},
+        og: {teamA: 1, teamB: 1}
+      }
+    }
+  ],
+
+
+
+  predictions: [
+    {
+      match: {
+        teamA: 'AUS',
+        scoreA: 0,
+        teamB: 'NET',
+        scoreB: 0
+      },
+      prediction: {
+        moe: {teamA: 0, teamB: 5}
+        /*
+        joey: {teamA: 3, teamB: 0},
+        yoseph: {teamA: 2, teamB: 0},
+        kaleb: {teamA: 2, teamB: 0},
+        eyassu: {teamA: 2, teamB: 0}
+        */
+      }
+    },
+
+    {
+      match: {
+        teamA: 'SPA',
+        scoreA: 0,
+        teamB: 'CHI',
+        scoreB: 0
+      },
+      prediction: {
+        moe: {teamA: 2, teamB: 1}
+        /*
+        joey: {teamA: 3, teamB: 1},
+        yoseph: {teamA: 2, teamB: 1},
+        eyassu: {teamA: 2, teamB: 1},
+        kaleb: {teamA: 4, teamB: 0}
+        */
+      }
+    },
+
+    {
+      match: {
+        teamA: 'CAM',
+        scoreA: 0,
+        teamB: 'CRO',
+        scoreB: 0
+      },
+      prediction: {
+        moe: {teamA: 0, teamB: 1}
+        /*
+        joey: {teamA: 2, teamB: 0},
+        yoseph: {teamA: 1, teamB: 1},
+        eyassu: {teamA: 2, teamB: 0},
         kaleb: {teamA: 2, teamB: 1}
+        */
       }
     }
   ]
