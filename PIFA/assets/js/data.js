@@ -301,6 +301,7 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
+        joey: {teamA: 1, teamB: 3},
         moe: {teamA: 0, teamB: 5},
         eyassu: {teamA: 0, teamB: 3},
         og: {teamA: 1, teamB: 2}
@@ -322,6 +323,7 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
+        joey: {teamA: 2, teamB: 1},
         moe: {teamA: 2, teamB: 1},
         eyassu: {teamA: 3, teamB: 1},
         og: {teamA: 2, teamB: 0}
@@ -343,6 +345,7 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
+        joey: {teamA: 0, teamB: 2},
         moe: {teamA: 0, teamB: 1},
         eyassu: {teamA: 1, teamB: 2},
         og: {teamA: 1, teamB: 0}
