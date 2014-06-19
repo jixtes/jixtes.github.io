@@ -292,9 +292,9 @@ var PIFA = {
     {
       match: {
         teamA: 'AUS',
-        scoreA: 0,
+        scoreA: 2,
         teamB: 'NET',
-        scoreB: 0
+        scoreB: 3
       },
       prediction: {
         joey: {teamA: 1, teamB: 3},
@@ -318,7 +318,7 @@ var PIFA = {
         teamA: 'SPA',
         scoreA: 0,
         teamB: 'CHI',
-        scoreB: 0
+        scoreB: 2
       },
       prediction: {
         joey: {teamA: 2, teamB: 1},
@@ -342,7 +342,7 @@ var PIFA = {
         teamA: 'CAM',
         scoreA: 0,
         teamB: 'CRO',
-        scoreB: 2
+        scoreB: 4
       },
       prediction: {
         joey: {teamA: 0, teamB: 2},
