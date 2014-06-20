@@ -372,54 +372,14 @@ var PIFA = {
         kaleb: {teamA: 1, teamB: 1},
         yoseph: {teamA: 1, teamB: 2}
       }
-    }
-  ],
-
-
-
-  predictions: [
-    /*
-    {
-      match: {
-        teamA: 'COL',
-        scoreA: 2,
-        teamB: 'COT',
-        scoreB: 1
-      },
-      prediction: {
-        joey: {teamA: 1, teamB: 1},
-        moe: {teamA: 3, teamB: 1},
-        eyassu: {teamA: 2, teamB: 1},
-        og: {teamA: 1, teamB: 2},
-        kaleb: {teamA: 1, teamB: 1},
-        yoseph: {teamA: 2, teamB: 2}
-      }
     },
-
-    {
-      match: {
-        teamA: 'URU',
-        scoreA: 2,
-        teamB: 'ENG',
-        scoreB: 1
-      },
-      prediction: {
-        joey: {teamA: 0, teamB: 1},
-        moe: {teamA: 2, teamB: 1},
-        eyassu: {teamA: 1, teamB: 2},
-        og: {teamA: 1, teamB: 2},
-        kaleb: {teamA: 1, teamB: 1},
-        yoseph: {teamA: 1, teamB: 2}
-      }
-    },
-    */
 
     {
       match: {
         teamA: 'JAP',
         scoreA: 0,
         teamB: 'GRE',
-        scoreB: 2
+        scoreB: 0
       },
       prediction: {
         joey: {teamA: 1, teamB: 0},
@@ -428,6 +388,67 @@ var PIFA = {
         og: {teamA: 1, teamB: 1},
         kaleb: {teamA: 0, teamB: 1},
         yoseph: {teamA: 1, teamB: 1}
+      }
+    }
+  ],
+
+
+
+  predictions: [
+    {
+      match: {
+        teamA: 'ITA',
+        scoreA: 0,
+        teamB: 'ECU',
+        scoreB: 0
+      },
+      prediction: {
+        /*
+        joey: {teamA: 1, teamB: 1},
+        moe: {teamA: 3, teamB: 1},
+        eyassu: {teamA: 2, teamB: 1},
+        og: {teamA: 1, teamB: 2},
+        kaleb: {teamA: 1, teamB: 1},
+        yoseph: {teamA: 2, teamB: 2}
+        */
+      }
+    },
+
+    {
+      match: {
+        teamA: 'SWI',
+        scoreA: 0,
+        teamB: 'FRA',
+        scoreB: 0
+      },
+      prediction: {
+        /*
+        joey: {teamA: 0, teamB: 1},
+        moe: {teamA: 2, teamB: 1},
+        eyassu: {teamA: 1, teamB: 2},
+        og: {teamA: 1, teamB: 2},
+        kaleb: {teamA: 1, teamB: 1},
+        yoseph: {teamA: 1, teamB: 2}
+        */
+      }
+    },
+
+    {
+      match: {
+        teamA: 'HON',
+        scoreA: 0,
+        teamB: 'ECU',
+        scoreB: 0
+      },
+      prediction: {
+        /*
+        joey: {teamA: 1, teamB: 0},
+        moe: {teamA: 0, teamB: 2},
+        eyassu: {teamA: 2, teamB: 1},
+        og: {teamA: 1, teamB: 1},
+        kaleb: {teamA: 0, teamB: 1},
+        yoseph: {teamA: 1, teamB: 1}
+        */
       }
     }
   ]
