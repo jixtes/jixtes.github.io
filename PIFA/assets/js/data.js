@@ -399,7 +399,7 @@ var PIFA = {
       match: {
         teamA: 'ITA',
         scoreA: 0,
-        teamB: 'ECU',
+        teamB: 'COS',
         scoreB: 0
       },
       prediction: {
