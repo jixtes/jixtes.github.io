@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# Rev 0.1.1
+
+CACHE:
+assets/angular/angular.min.js
+assets/bs3/css/bootstrap.min.css
+assets/bs3/fonts/glyphicons-halflings-regular.eot
+assets/bs3/fonts/glyphicons-halflings-regular.svg
+assets/bs3/fonts/glyphicons-halflings-regular.ttf
+assets/bs3/fonts/glyphicons-halflings-regular.woff
+assets/image/touch-icon-144.png
+assets/js/app.js
+
+NETWORK:
+assets/js/data.js
