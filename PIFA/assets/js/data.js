@@ -488,15 +488,15 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
-        /*
-        joey: {teamA: 1, teamB: 1},
-        moe: {teamA: 3, teamB: 1},
-        eyassu: {teamA: 2, teamB: 1},
-        og: {teamA: 1, teamB: 2},
-        kaleb: {teamA: 1, teamB: 1},
-        yoseph: {teamA: 2, teamB: 2},
-        bini: {teamA: 1, teamB: 3}
-        */
+        
+        joey: {teamA: 3, teamB: 0},
+        moe: {teamA: 4, teamB: 0},
+        eyassu: {teamA: 4, teamB: 0},
+        og: {teamA: 2, teamB: 0},
+        kaleb: {teamA: 2, teamB: 0},
+        yoseph: {teamA: 3, teamB: 0},
+        bini: {teamA: 4, teamB: 0}
+        
       }
     },
 
@@ -508,15 +508,15 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
-        /*
-        joey: {teamA: 0, teamB: 1},
-        moe: {teamA: 2, teamB: 1},
-        eyassu: {teamA: 1, teamB: 2},
-        og: {teamA: 1, teamB: 2},
-        kaleb: {teamA: 1, teamB: 1},
-        yoseph: {teamA: 1, teamB: 2},
-        bini: {teamA: 1, teamB: 3}
-        */
+        
+        joey: {teamA: 2, teamB: 0},
+        moe: {teamA: 3, teamB: 0},
+        eyassu: {teamA: 3, teamB: 1},
+        og: {teamA: 2, teamB: 0},
+        kaleb: {teamA: 1, teamB: 0},
+        yoseph: {teamA: 3, teamB: 0},
+        bini: {teamA: 4, teamB: 1}
+        
       }
     },
 
@@ -528,15 +528,15 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
-        /*
-        joey: {teamA: 1, teamB: 0},
-        moe: {teamA: 0, teamB: 2},
-        eyassu: {teamA: 2, teamB: 1},
-        og: {teamA: 1, teamB: 1},
-        kaleb: {teamA: 0, teamB: 1},
-        yoseph: {teamA: 1, teamB: 1},
-        bini: {teamA: 1, teamB: 3}
-        */
+        
+        joey: {teamA: 0, teamB: 2},
+        moe: {teamA: 1, teamB: 2},
+        eyassu: {teamA: 1, teamB: 2},
+        og: {teamA: 0, teamB: 2},
+        kaleb: {teamA: 0, teamB: 0},
+        yoseph: {teamA: 1, teamB: 2},
+        bini: {teamA: 1, teamB: 2}
+        
       }
     }
   ]
