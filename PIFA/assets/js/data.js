@@ -474,16 +474,12 @@ var PIFA = {
         yoseph: {teamA: 1, teamB: 1},
         bini: {teamA: 0, teamB: 2}
       }
-    }
-  ],
+    },
 
-
-
-  predictions: [
     {
       match: {
         teamA: 'ARG',
-        scoreA: 0,
+        scoreA: 1,
         teamB: 'IRA',
         scoreB: 0
       },
@@ -503,9 +499,9 @@ var PIFA = {
     {
       match: {
         teamA: 'GER',
-        scoreA: 0,
+        scoreA: 2,
         teamB: 'GHA',
-        scoreB: 0
+        scoreB: 2
       },
       prediction: {
         
@@ -523,7 +519,7 @@ var PIFA = {
     {
       match: {
         teamA: 'NIG',
-        scoreA: 0,
+        scoreA: 1,
         teamB: 'BOS',
         scoreB: 0
       },
@@ -536,6 +532,71 @@ var PIFA = {
         kaleb: {teamA: 0, teamB: 0},
         yoseph: {teamA: 1, teamB: 2},
         bini: {teamA: 1, teamB: 2}
+        
+      }
+    }
+
+  ],
+
+
+
+  predictions: [
+    {
+      match: {
+        teamA: 'BEL',
+        scoreA: 1,
+        teamB: 'RUS',
+        scoreB: 0
+      },
+      prediction: {
+        
+        // joey: {teamA: 3, teamB: 0},
+        // moe: {teamA: 4, teamB: 0},
+        // eyassu: {teamA: 4, teamB: 0},
+        // og: {teamA: 2, teamB: 0},
+        // kaleb: {teamA: 2, teamB: 0},
+        // yoseph: {teamA: 3, teamB: 0},
+        // bini: {teamA: 4, teamB: 0}
+        
+      }
+    },
+
+    {
+      match: {
+        teamA: 'KOR',
+        scoreA: 2,
+        teamB: 'ALG',
+        scoreB: 2
+      },
+      prediction: {
+        
+        // joey: {teamA: 2, teamB: 0},
+        // moe: {teamA: 3, teamB: 0},
+        // eyassu: {teamA: 3, teamB: 1},
+        // og: {teamA: 2, teamB: 0},
+        // kaleb: {teamA: 1, teamB: 0},
+        // yoseph: {teamA: 3, teamB: 0},
+        // bini: {teamA: 4, teamB: 1}
+        
+      }
+    },
+
+    {
+      match: {
+        teamA: 'USA',
+        scoreA: 1,
+        teamB: 'POR',
+        scoreB: 0
+      },
+      prediction: {
+        
+        // joey: {teamA: 0, teamB: 2},
+        // moe: {teamA: 1, teamB: 2},
+        // eyassu: {teamA: 1, teamB: 2},
+        // og: {teamA: 0, teamB: 2},
+        // kaleb: {teamA: 0, teamB: 0},
+        // yoseph: {teamA: 1, teamB: 2},
+        // bini: {teamA: 1, teamB: 2}
         
       }
     }
