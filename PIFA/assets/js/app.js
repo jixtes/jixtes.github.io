@@ -13,7 +13,7 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
   $scope.matches = PIFA.matches;
   $scope.nextPredictions = PIFA.predictions;
 
-  // this is where the `magic` happens
+  // this is where the `magic` happens  
   for (match in $scope.matches) {
     $scope.matches[match].pts = {};
 
@@ -28,44 +28,58 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
         $scope.matches[match].pts[player] = -2;
       }
 
-      // spot on prediction
-      else if (($scope.matches[match].match.scoreA === $scope.matches[match].prediction[player].teamA) && ($scope.matches[match].match.scoreB === $scope.matches[match].prediction[player].teamB)) {
-        $scope.players[player].PTS += 3;
-        $scope.players[player].spotOn++;
-        $scope.matches[match].pts[player] = 3;
-      }
-
-      // side prediction
-      else if (
-          ($scope.matches[match].match.scoreA > $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA > $scope.matches[match].prediction[player].teamB) &&
-          ($scope.matches[match].match.scoreA < $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA < $scope.matches[match].prediction[player].teamB)
-      ) {
-        // goal difference
-        if (($scope.matches[match].match.scoreA - $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA - $scope.matches[match].prediction[player].teamB)) {
-          $scope.players[player].PTS += 2;
-          $scope.players[player].gd++;
-          $scope.matches[match].pts[player] = 2;
-        } else {
-          $scope.players[player].PTS += 1;
-          $scope.players[player].right++;
-          $scope.matches[match].pts[player] = 1;
-        }
-      }
-
-      // wrong prediction
+      // Game not forfeited
       else {
-        $scope.players[player].PTS -= 1;
-        $scope.players[player].wrong++;
-        $scope.matches[match].pts[player] = -1;
+
+          $scope.players[player].played++;
+
+          // spot on prediction
+          if (($scope.matches[match].match.scoreA === $scope.matches[match].prediction[player].teamA) && ($scope.matches[match].match.scoreB === $scope.matches[match].prediction[player].teamB)) {
+            $scope.players[player].PTS += 3;
+            $scope.players[player].spotOn++;
+            $scope.matches[match].pts[player] = 3;
+          }
+
+          // side prediction
+          else if (
+              ($scope.matches[match].match.scoreA > $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA > $scope.matches[match].prediction[player].teamB) &&
+              ($scope.matches[match].match.scoreA < $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA < $scope.matches[match].prediction[player].teamB)
+          ) {
+            // goal difference
+            if (($scope.matches[match].match.scoreA - $scope.matches[match].match.scoreB) === ($scope.matches[match].prediction[player].teamA - $scope.matches[match].prediction[player].teamB)) {
+              $scope.players[player].PTS += 2;
+              $scope.players[player].gd++;
+              $scope.matches[match].pts[player] = 2;
+            } else {
+              $scope.players[player].PTS += 1;
+              $scope.players[player].right++;
+              $scope.matches[match].pts[player] = 1;
+            }
+          }
+
+          // wrong prediction
+          else {
+            $scope.players[player].PTS -= 1;
+            $scope.players[player].wrong++;
+            $scope.matches[match].pts[player] = -1;
+          }
+
       }
     }
   }
+
 
   // calculating ranking...
   // it'll be `easier` to do it this way - i don't deserve to use Angular
   // forgiveness, please
   $scope.playersList = [];
   for (player in $scope.players) {
+    
+    // Calculating success rate
+    ptsWithoutForfeit = $scope.players[player].PTS + ($scope.players[player].forfeit * 2);
+    $scope.players[player].success = ptsWithoutForfeit/($scope.players[player].played*3) * 100, 2;
+    $scope.players[player].success = $scope.players[player].success.toFixed(2)+'%';
+
     $scope.playersList.push({name: player, stat: $scope.players[player]});
   };
 }]);

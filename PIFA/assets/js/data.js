@@ -1,60 +1,74 @@
 var PIFA = {
   players: {
     eyassu: {
+      played: 0,
+      success: 0,
       spotOn: 0,
       gd: 0,
       right: 0,
       wrong: 0,
       forfeit: 0,
-      PTS: 0
+      PTS: 0,
     },
     joey: {
+      played: 0,
+      success: 0,
       spotOn: 0,
       gd: 0,
       right: 0,
       wrong: 0,
       forfeit: 0,
-      PTS: 0
+      PTS: 0,
     },
     kaleb: {
+      played: 0,
+      success: 0,
       spotOn: 0,
       gd: 0,
       right: 0,
       wrong: 0,
       forfeit: 0,
-      PTS: 0
+      PTS: 0,
     },
     moe: {
+      played: 0,
+      success: 0,
       spotOn: 0,
       gd: 0,
       right: 0,
       wrong: 0,
       forfeit: 0,
-      PTS: 0
+      PTS: 0,
     },
     og: {
+      played: 0,
+      success: 0,
       spotOn: 0,
       gd: 0,
       right: 0,
       wrong: 0,
       forfeit: 0,
-      PTS: 0
+      PTS: 0,
     },
     yoseph: {
+      played: 0,
+      success: 0,
       spotOn: 0,
       gd: 0,
       right: 0,
       wrong: 0,
       forfeit: 0,
-      PTS: 0
+      PTS: 0,
     },
     bini: {
+      played: 0,
+      success: 0,
       spotOn: 0,
       gd: 0,
       right: 0,
       wrong: 0,
       forfeit: 0,
-      PTS: 0
+      PTS: 0,
     }
   },
 

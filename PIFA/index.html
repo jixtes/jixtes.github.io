@@ -104,6 +104,8 @@
             <thead>
               <tr>
                 <th>Player</th>
+                <th>P</th>
+                <th>S%</th>
                 <th class="text-success">SO</th>
                 <th class="text-success">GD</th>
                 <th class="text-success">W</th>
@@ -116,6 +118,8 @@
             <tbody>
               <tr ng-repeat="player in playersList | orderBy:'stat.forfeit':false | orderBy:'stat.wrong':false | orderBy:'stat.right':true | orderBy:'stat.gd':true | orderBy:'stat.spotOn':true | orderBy:'stat.PTS':true">
                 <td ng-bind="player.name"></td>
+                <td ng-bind="player.stat.played"></td>
+                <td ng-bind="player.stat.success"></td>
                 <td ng-bind="player.stat.spotOn"></td>
                 <td ng-bind="player.stat.gd"></td>
                 <td ng-bind="player.stat.right"></td>
