@@ -76,8 +76,8 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
   for (player in $scope.players) {
     
     // Calculating success rate
-    ptsWithoutForfeit = $scope.players[player].PTS + ($scope.players[player].forfeit * 2);
-    $scope.players[player].success = ptsWithoutForfeit/($scope.players[player].played*3) * 100, 2;
+    ptsWithoutDeduction = $scope.players[player].PTS + ($scope.players[player].forfeit * 2)+$scope.players[player].wrong;
+    $scope.players[player].success = ptsWithoutDeduction/($scope.players[player].played*3) * 100;
     $scope.players[player].success = $scope.players[player].success.toFixed(2)+'%';
 
     $scope.playersList.push({name: player, stat: $scope.players[player]});
