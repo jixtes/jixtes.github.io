@@ -31,6 +31,10 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
       // Game not forfeited
       else {
 
+          // initialize played
+          if(!$scope.players[player].hasOwnProperty('played'))
+            $scope.players[player].played = 0;  
+
           $scope.players[player].played++;
 
           // spot on prediction
