@@ -35,7 +35,7 @@ app.directive('sort', function($timeout,sortService) {
 							element.removeClass('sort_'+order);
 							scope.sort = sortService.sortOrder;
 						}
-					}, 20000);
+					}, 15000);
 				})
 			})
 
