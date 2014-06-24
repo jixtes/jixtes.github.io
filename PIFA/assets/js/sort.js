@@ -1,41 +1,45 @@
 var app = angular.module('sort_column', []);
 
 order = "asc";
-activeElement = null;
+activeColumn = null;
 
 app.directive('sort', function($timeout,sortService) { 
 	return {
 		scope: false,
-		link: function(scope, element, attrs) {
-			element.addClass('sort')
+		link: function(scope, column, attrs) {
+			column.addClass('sort')
 
-			element.on('click',function() {
+			// Change sort default on click
+			column.on('click',function() {
 				scope.$apply(function(scope){
-					var negate = "";
 
-					if (activeElement)
-						activeElement.removeClass('sort_desc').removeClass('sort_asc');				
+					// Remove/Add sort sign from active col
+					if (activeColumn)
+						activeColumn.removeClass('sort_desc').removeClass('sort_asc');				
 
 					if (order == "desc"){
-						element.addClass('sort_asc');
+						column.addClass('sort_asc');
 						order = "asc"						
 					}
 					else {
-						element.addClass('sort sort_desc');
+						column.addClass('sort sort_desc');
 						order = "desc";						
 					}
 
-					activeElement = element;
+					activeColumn = column;
 
+					// Set Sorting predicate
 					negate = (order=="desc") ? '-':'';
 					scope.sort = [negate+attrs.sort]
 
+					// On time out reset to the default order.
 					$timeout(function(){	
-						if(activeElement == element){				
-							element.removeClass('sort_'+order);
+						if(activeColumn == column){				
+							column.removeClass('sort_'+order);
 							scope.sort = sortService.sortOrder;
 						}
 					}, 15000);
+					
 				})
 			})
 
