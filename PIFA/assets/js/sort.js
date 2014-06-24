@@ -1,6 +1,7 @@
 var app = angular.module('sort_column', []);
 
 order = "desc";
+activeElement = null;
 
 app.directive('sort', function($timeout,sortService) { 
 	return {
@@ -12,16 +13,19 @@ app.directive('sort', function($timeout,sortService) {
 				scope.$apply(function(scope){
 					var negate = "";
 
+					if (activeElement)
+						activeElement.removeClass('sort_desc').removeClass('sort_asc');				
+
 					if (order == "desc"){
-						element.removeClass('sort_desc');
 						element.addClass('sort_asc');
 						order = "asc"						
 					}
 					else {
-						element.removeClass('sort_asc');
 						element.addClass('sort sort_desc');
 						order = "desc";						
 					}
+
+					activeElement = element;
 
 					negate = (order=="desc") ? '-':'';
 					scope.sort = [negate+attrs.sort]
