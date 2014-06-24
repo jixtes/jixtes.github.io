@@ -31,10 +31,10 @@ app.directive('sort', function($timeout,sortService) {
 					scope.sort = [negate+attrs.sort]
 
 					$timeout(function(){	
-						if(activeElement == element)				
+						if(activeElement == element){				
 							element.removeClass('sort_'+order);
-						
-						scope.sort = sortService.sortOrder;
+							scope.sort = sortService.sortOrder;
+						}
 					}, 10000);
 				})
 			})
@@ -43,4 +43,3 @@ app.directive('sort', function($timeout,sortService) {
 		}
 	}
 })
-
