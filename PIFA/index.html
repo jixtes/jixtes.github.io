@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-<html lang="en" manifest="pifa.appcache">
-<!-- <html> -->
+<!-- <html lang="en" manifest="pifa.appcache"> -->
+<html>
   <head>
     <meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" name="viewport">
     <meta content="PIFA" name="apple-mobile-web-app-title">
@@ -65,6 +65,19 @@
       .palyer-name {
         margin-left: -9px;
       }
+
+      /*sort signs*/
+      .sort { 
+        background-position-y: 50%  !important ;
+        background-position-x: 90% !important;
+      }
+      .sort_asc {
+        background: url("assets/image/sort_asc.png") no-repeat;
+      }
+
+      .sort_desc {
+        background: url("assets/image/sort_desc.png") no-repeat;
+      }
     </style>
   </head>
 
@@ -109,18 +122,18 @@
               <tr>
                 <th>Player</th>
                 <th>P</th>
-                <th>S%</th>
-                <th class="text-success">SO</th>
-                <th class="text-success">GD</th>
-                <th class="text-success">W</th>
-                <th class="text-danger">L</th>
-                <th class="text-warning">F</th>
-                <th class="text-primary">PTS</th>
+                <th sort="stat.success">S%</th>
+                <th sort="stat.spotOn" class="text-success">SO</th>
+                <th sort="stat.gd" class="text-success">GD</th>
+                <th sort="stat.right" class="text-success">W</th>
+                <th sort="stat.wrong" class="text-danger">L</th>
+                <th sort="stat.forfeit" class="text-warning">F</th>
+                <th sort="stat.PTS" class="text-primary">PTS</th>
               </tr>
             </thead>
 
             <tbody>
-              <tr ng-repeat="player in playersList | orderBy:'stat.forfeit':false | orderBy:'stat.wrong':false | orderBy:'stat.right':true | orderBy:'stat.gd':true | orderBy:'stat.spotOn':true | orderBy:'stat.PTS':true">
+              <tr ng-repeat="player in playersList | orderBy:sort">
                 <td ng-bind="player.name"></td>
                 <td ng-bind="player.stat.played"></td>
                 <td ng-bind="player.stat.success"></td>
@@ -640,6 +653,7 @@
 
     <script src="assets/angular/angular.min.js"></script>
     <script src="http://moeduffdude.github.io/PIFA/assets/js/data.js"></script>
+    <script src="assets/js/sort.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>

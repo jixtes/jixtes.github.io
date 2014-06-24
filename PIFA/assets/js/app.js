@@ -6,7 +6,7 @@
 //   }, false);
 // }, false);
 
-var app = angular.module('PIFA', []);
+var app = angular.module('PIFA', ['sort_column']);
 
 app.controller('PIFACtrl', ['$scope', function ($scope) {
   $scope.players = PIFA.players;
@@ -87,3 +87,7 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
     $scope.playersList.push({name: player, stat: $scope.players[player]});
   };
 }]);
+
+app.service('sortService', function() {
+  this.sortOrder = ['stat.forfeit','-stat.success','stat.wrong','-stat.right','-stat.gd','-stat.spotOn','-stat.PTS'];
+})
