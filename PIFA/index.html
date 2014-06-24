@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-<!-- <html lang="en" manifest="pifa.appcache"> -->
 <html lang="en" manifest="pifa.appcache">
+<!-- <html> -->
   <head>
     <meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" name="viewport">
     <meta content="PIFA" name="apple-mobile-web-app-title">
@@ -60,6 +60,10 @@
 
       p.list-group-item-text {
         margin-bottom: -6px;
+      }
+
+      .palyer-name {
+        margin-left: -9px;
       }
     </style>
   </head>
@@ -143,26 +147,29 @@
             <div class="list-group-item" ng-repeat="prediction in nextPredictions">
               <h3 class="list-group-item-heading">
                 <div class="row">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ prediction.match.teamA }}</span>
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="prediction.match.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
                   </div>
 
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
-                    {{ prediction.match.teamB }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left"
+                    ng-bind="prediction.match.teamB"
+                  ></div>
                 </div>
               </h3>
 
-              <!-- Eyassu -->
+              <!-- Bini -->
               <p class="list-group-item-text text-muted" >
-                <div class="row" ng-hide="prediction.prediction.eyassu === undefined">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ prediction.prediction.eyassu.teamA }}
-                  </div>
+                <div class="row" ng-hide="prediction.prediction.bini === undefined">
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="prediction.prediction.bini.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -170,8 +177,37 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
                     <div class="row">
-                      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                        {{ prediction.prediction.eyassu.teamB }}
+                      <div
+                        class="col-lg-1 col-md-1 col-sm-1 col-xs-1"
+                        ng-bind="prediction.prediction.bini.teamB"
+                      ></div>
+
+                      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                        <span class="text-muted">Bini</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </p>
+
+              <!-- Eyassu -->
+              <p class="list-group-item-text text-muted" >
+                <div class="row" ng-hide="prediction.prediction.eyassu === undefined">
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="prediction.prediction.eyassu.teamA"
+                  ></div>
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                    <small class="text-muted">-</small>
+                  </div>
+
+                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
+                    <div class="row">
+                      <div
+                        class="col-lg-1 col-md-1 col-sm-1 col-xs-1"
+                        ng-bind="prediction.prediction.eyassu.teamB"
+                      >
                       </div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
@@ -185,9 +221,10 @@
               <!-- Joey -->
               <p class="list-group-item-text text-muted">
                 <div class="row" ng-hide="prediction.prediction.joey === undefined">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ prediction.prediction.joey.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="prediction.prediction.joey.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -195,9 +232,10 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
                     <div class="row">
-                      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                        {{ prediction.prediction.joey.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-1 col-md-1 col-sm-1 col-xs-1"
+                        ng-bind="prediction.prediction.joey.teamB"
+                      ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                         <span class="text-muted">Joey</span>
@@ -207,12 +245,13 @@
                 </div>
               </p>
 
-              <!-- Kaleb -->
+              <!-- kaleab -->
               <p class="list-group-item-text text-muted">
-                <div class="row" ng-hide="prediction.prediction.kaleb === undefined">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ prediction.prediction.kaleb.teamA }}
-                  </div>
+                <div class="row" ng-hide="prediction.prediction.kaleab === undefined">
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="prediction.prediction.kaleab.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -220,12 +259,13 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
                     <div class="row">
-                      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                        {{ prediction.prediction.kaleb.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-1 col-md-1 col-sm-1 col-xs-1"
+                        ng-bind="prediction.prediction.kaleab.teamB"
+                      ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted">Kaleb</span>
+                        <span class="text-muted">kaleab</span>
                       </div>
                     </div>
                   </div>
@@ -235,9 +275,10 @@
               <!-- Moe -->
               <p class="list-group-item-text text-muted">
                 <div class="row" ng-hide="prediction.prediction.moe === undefined">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ prediction.prediction.moe.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="prediction.prediction.moe.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -245,9 +286,10 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
                     <div class="row">
-                      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                        {{ prediction.prediction.moe.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-1 col-md-1 col-sm-1 col-xs-1"
+                        ng-bind="prediction.prediction.moe.teamB"
+                      ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                         <span class="text-muted">Moe</span>
@@ -260,9 +302,10 @@
               <!-- OG -->
               <p class="list-group-item-text text-muted">
                 <div class="row" ng-hide="prediction.prediction.og === undefined">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ prediction.prediction.og.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="prediction.prediction.og.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -270,9 +313,10 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
                     <div class="row">
-                      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                        {{ prediction.prediction.og.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-1 col-md-1 col-sm-1 col-xs-1"
+                        ng-bind="prediction.prediction.og.teamB"
+                      ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                         <span class="text-muted">OG</span>
@@ -285,9 +329,10 @@
               <!-- Yoseph -->
               <p class="list-group-item-text text-muted">
                 <div class="row" ng-hide="prediction.prediction.yoseph === undefined">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ prediction.prediction.yoseph.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="prediction.prediction.yoseph.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -295,9 +340,10 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
                     <div class="row">
-                      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                        {{ prediction.prediction.yoseph.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-1 col-md-1 col-sm-1 col-xs-1"
+                        ng-bind="prediction.prediction.yoseph.teamB"
+                      ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                         <span class="text-muted">Yoseph</span>
@@ -325,7 +371,7 @@
               <h3 class="list-group-item-heading">
                 <div class="row">
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ match.match.teamA }}&nbsp;&nbsp;&nbsp;<span class="text-muted">{{ match.match.scoreA }}</span>
+                    <span ng-bind="match.match.teamA"></span>&nbsp;&nbsp;&nbsp;<span class="text-muted" ng-bind="match.match.scoreA"></span>
                   </div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
@@ -333,19 +379,20 @@
                   </div>
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-left">
-                    <span class="text-muted">{{ match.match.scoreB }}</span>&nbsp;&nbsp;&nbsp;{{ match.match.teamB }}
+                    <span class="text-muted" ng-bind="match.match.scoreB"></span>&nbsp;&nbsp;&nbsp;<span ng-bind="match.match.teamB"></span>
                   </div>
                 </div>
               </h3>
 
 
 
-              <!-- Eyassu -->
+              <!-- Bini -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ match.prediction.eyassu.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="match.prediction.bini.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -353,19 +400,54 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                     <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left">
-                        {{ match.prediction.eyassu.teamB }}
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
+                        ng-bind="match.prediction.bini.teamB"
+                      ></div>
+
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
+                        ng-class="{'spot-on': match.pts.bini === 3, 'gd': match.pts.bini === 2, 'win': match.pts.bini === 1, 'lose': match.pts.bini === -1, 'forfeit': match.pts.bini === -2}"
+                        ng-bind="match.pts.bini"
+                      ></div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                        <span class="text-muted palyer-name">Bini</span>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </p>
+
+
+
+              <!-- Eyassu -->
+              <p class="list-group-item-text text-muted">
+                <div class="row">
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="match.prediction.eyassu.teamA"
+                  ></div>
+
+                  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+                    <small class="text-muted">-</small>
+                  </div>
+
+                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                    <div class="row">
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
+                        ng-bind="match.prediction.eyassu.teamB"
+                      ></div>
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
                         ng-class="{'spot-on': match.pts.eyassu === 3, 'gd': match.pts.eyassu === 2, 'win': match.pts.eyassu === 1, 'lose': match.pts.eyassu === -1, 'forfeit': match.pts.eyassu === -2}"
-                      >
-                        {{ match.pts.eyassu }}
-                      </div>
+                        ng-bind="match.pts.eyassu"
+                      ></div>
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
-                        <span class="text-muted">Eyassu</span>
+                        <span class="text-muted palyer-name">Eyassu</span>
                       </div>
                     </div>
                   </div>
@@ -377,9 +459,10 @@
               <!-- Joey -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ match.prediction.joey.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="match.prediction.joey.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -387,19 +470,19 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                     <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left">
-                        {{ match.prediction.joey.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
+                        ng-bind="match.prediction.joey.teamB"
+                      ></div>
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
                         ng-class="{'spot-on': match.pts.joey === 3, 'gd': match.pts.joey === 2, 'win': match.pts.joey === 1, 'lose': match.pts.joey === -1, 'forfeit': match.pts.joey === -2}"
-                      >
-                        {{ match.pts.joey }}
-                      </div>
+                        ng-bind="match.pts.joey"
+                      ></div>
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
-                        <span class="text-muted">Joey</span>
+                        <span class="text-muted palyer-name">Joey</span>
                       </div>
                     </div>
                   </div>
@@ -408,12 +491,13 @@
 
 
 
-              <!-- Kaleb -->
+              <!-- kaleab -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ match.prediction.kaleb.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="match.prediction.kaleab.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -421,19 +505,19 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                     <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left">
-                        {{ match.prediction.kaleb.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
+                        ng-bind="match.prediction.kaleab.teamB"
+                      ></div>
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'spot-on': match.pts.kaleb === 3, 'gd': match.pts.kaleb === 2, 'win': match.pts.kaleb === 1, 'lose': match.pts.kaleb === -1, 'forfeit': match.pts.kaleb === -2}"
-                      >
-                        {{ match.pts.kaleb }}
-                      </div>
+                        ng-class="{'spot-on': match.pts.kaleab === 3, 'gd': match.pts.kaleab === 2, 'win': match.pts.kaleab === 1, 'lose': match.pts.kaleab === -1, 'forfeit': match.pts.kaleab === -2}"
+                        ng-bind="match.pts.kaleab"
+                      ></div>
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
-                        <span class="text-muted">Kaleb</span>
+                        <span class="text-muted palyer-name">kaleab</span>
                       </div>
                     </div>
                   </div>
@@ -445,9 +529,10 @@
               <!-- Moe -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ match.prediction.moe.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="match.prediction.moe.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -455,19 +540,19 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                     <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left">
-                        {{ match.prediction.moe.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
+                        ng-bind="match.prediction.moe.teamB"
+                      ></div>
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
                         ng-class="{'spot-on': match.pts.moe === 3, 'gd': match.pts.moe === 2, 'win': match.pts.moe === 1, 'lose': match.pts.moe === -1, 'forfeit': match.pts.moe === -2}"
-                      >
-                        {{ match.pts.moe }}
-                      </div>
+                        ng-bind="match.pts.moe"
+                      ></div>
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
-                        <span class="text-muted">Moe</span>
+                        <span class="text-muted palyer-name">Moe</span>
                       </div>
                     </div>
                   </div>
@@ -479,9 +564,10 @@
               <!-- OG -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ match.prediction.og.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="match.prediction.og.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -489,19 +575,19 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                     <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left">
-                        {{ match.prediction.og.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
+                        ng-bind="match.prediction.og.teamB"
+                      ></div>
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
                         ng-class="{'spot-on': match.pts.og === 3, 'gd': match.pts.og === 2, 'win': match.pts.og === 1, 'lose': match.pts.og === -1, 'forfeit': match.pts.og === -2}"
-                      >
-                        {{ match.pts.og }}
-                      </div>
+                        ng-bind="match.pts.og"
+                      ></div>
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
-                        <span class="text-muted">OG</span>
+                        <span class="text-muted palyer-name">OG</span>
                       </div>
                     </div>
                   </div>
@@ -513,9 +599,10 @@
               <!-- Yoseph -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
-                  <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
-                    {{ match.prediction.yoseph.teamA }}
-                  </div>
+                  <div
+                    class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
+                    ng-bind="match.prediction.yoseph.teamA"
+                  ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
                     <small class="text-muted">-</small>
@@ -523,19 +610,19 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                     <div class="row">
-                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left">
-                        {{ match.prediction.yoseph.teamB }}
-                      </div>
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
+                        ng-bind="match.prediction.yoseph.teamB"
+                      ></div>
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
                         ng-class="{'spot-on': match.pts.yoseph === 3, 'gd': match.pts.yoseph === 2, 'win': match.pts.yoseph === 1, 'lose': match.pts.yoseph === -1, 'forfeit': match.pts.yoseph === -2}"
-                      >
-                        {{ match.pts.yoseph }}
-                      </div>
+                        ng-bind="match.pts.yoseph"
+                      ></div>
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
-                        <span class="text-muted">Yoseph</span>
+                        <span class="text-muted palyer-name">Yoseph</span>
                       </div>
                     </div>
                   </div>

@@ -1,16 +1,16 @@
-window.addEventListener('load', function (e) {
-  window.applicationCache.addEventListener('updateready', function (e) {
-    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-      window.location.reload();
-    }
-  }, false);
-}, false);
+// window.addEventListener('load', function (e) {
+//   window.applicationCache.addEventListener('updateready', function (e) {
+//     if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+//       window.location.reload();
+//     }
+//   }, false);
+// }, false);
 
 var app = angular.module('PIFA', []);
 
 app.controller('PIFACtrl', ['$scope', function ($scope) {
   $scope.players = PIFA.players;
-  $scope.matches = PIFA.matches;
+  $scope.matches = PIFA.matches.reverse();
   $scope.nextPredictions = PIFA.predictions;
 
   // this is where the `magic` happens  
