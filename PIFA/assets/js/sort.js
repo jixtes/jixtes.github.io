@@ -30,8 +30,10 @@ app.directive('sort', function($timeout,sortService) {
 					negate = (order=="desc") ? '-':'';
 					scope.sort = [negate+attrs.sort]
 
-					$timeout(function(){					
-						element.removeClass('sort_'+order);
+					$timeout(function(){	
+						if(activeElement == element)				
+							element.removeClass('sort_'+order);
+						
 						scope.sort = sortService.sortOrder;
 					}, 10000);
 				})
