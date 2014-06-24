@@ -1,6 +1,6 @@
 var app = angular.module('sort_column', []);
 
-order = "desc";
+order = "asc";
 activeElement = null;
 
 app.directive('sort', function($timeout,sortService) { 
@@ -33,7 +33,7 @@ app.directive('sort', function($timeout,sortService) {
 					$timeout(function(){					
 						element.removeClass('sort_'+order);
 						scope.sort = sortService.sortOrder;
-					}, 15000);
+					}, 10000);
 				})
 			})
 
