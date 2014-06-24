@@ -7,6 +7,7 @@ app.directive('sort', function($timeout,sortService) {
 		scope: false,
 		link: function(scope, element, attrs) {
 			element.addClass('sort')
+
 			element.on('click',function() {
 				scope.$apply(function(scope){
 					var negate = "";
@@ -28,7 +29,7 @@ app.directive('sort', function($timeout,sortService) {
 					$timeout(function(){					
 						element.removeClass('sort_'+order);
 						scope.sort = sortService.sortOrder;
-					}, 4000);
+					}, 15000);
 				})
 			})
 
