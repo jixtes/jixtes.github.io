@@ -7,7 +7,7 @@ app.directive('sort', function($timeout,sortService) {
 	return {
 		scope: false,
 		link: function(scope, column, attrs) {
-			
+
 			// Change sort default on click
 			column.on('click',function() {
 				scope.$apply(function(scope){
@@ -29,15 +29,17 @@ app.directive('sort', function($timeout,sortService) {
 					negate = (order=="desc") ? '-':'';
 					scope.sort = [negate+attrs.sort]
 
-					// On time out reset to the default order.
+					// Set the active column
 					if(activeColumn != column){
 						activeColumn = column;
 
+						//On time out reset to the default order.
 						$timeout(function(){	
 							if(activeColumn == column){				
 								column.removeClass('sort_'+order);
 								scope.sort = sortService.sortOrder;
 							}
+							activeColumn = null;
 						}, 15000);
 					}					
 				})
