@@ -16,6 +16,22 @@ app.directive('sort', function($timeout,sortService) {
 					if (activeColumn)
 						activeColumn.removeClass('sort_desc').removeClass('sort_asc');				
 
+					// Set the active column
+					if(activeColumn != column){
+						activeColumn = column;
+						order = 'asc';
+
+						//On time out reset to the default order.
+						$timeout(function(){	
+							if(activeColumn == column){				
+								column.removeClass('sort_'+order);
+								scope.sort = sortService.sortOrder;
+
+								activeColumn = null;
+							}
+						}, 15000);
+					}
+
 					if (order == "desc"){
 						column.addClass('sort_asc');
 						order = "asc"						
@@ -28,21 +44,7 @@ app.directive('sort', function($timeout,sortService) {
 					// Set Sorting predicate
 					negate = (order=="desc") ? '-':'';
 					scope.sort = [negate+attrs.sort]
-
-					// Set the active column
-					if(activeColumn != column){
-						activeColumn = column;
-
-						//On time out reset to the default order.
-						$timeout(function(){	
-							if(activeColumn == column){				
-								column.removeClass('sort_'+order);
-								scope.sort = sortService.sortOrder;
-
-								activeColumn = null;
-							}
-						}, 15000);
-					}					
+					
 				})
 			})
 
