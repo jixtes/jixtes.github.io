@@ -38,8 +38,9 @@ app.directive('sort', function($timeout,sortService) {
 							if(activeColumn == column){				
 								column.removeClass('sort_'+order);
 								scope.sort = sortService.sortOrder;
+
+								activeColumn = null;
 							}
-							activeColumn = null;
 						}, 15000);
 					}					
 				})
