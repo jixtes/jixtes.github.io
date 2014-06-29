@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="pifa.appcache">
+<html lang="en">
   <head>
     <meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" name="viewport">
     <meta content="PIFA" name="apple-mobile-web-app-title">
@@ -22,10 +22,6 @@
 
       div.pts {
         color: #ecf0f1;
-      }
-
-      div.BOOM {
-        background-color: rgba(149, 165, 166, 0.8);
       }
 
       div.spot-on {
@@ -92,18 +88,14 @@
 
       <div class="row">
         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-          <p class="mt0 mb0">SPOT-ON draw (R)</p>
-          <p class="mt0 mb0">GD draw (R)</p>
-          <p class="mt0 mb0">SPOT-ON</p>
-          <p class="mt0 mb0">GD</p>
-          <p class="mt0 mb0">Winning side</p>
-          <p class="mt0 mb0">Wrong</p>
-          <p class="mt0 mb0">Forfeit</p>
+          <p class="mt0 mb0">SPOT-ON prediction</p>
+          <p class="mt0 mb0">Goal difference prediction</p>
+          <p class="mt0 mb0">Winning side prediction</p>
+          <p class="mt0 mb0">Wrong prediction</p>
+          <p class="mt0 mb0">Forfeit prediction</p>
         </div>
 
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-          <p class="mt0 mb0"><strong class="text-warning">4</strong> PTS</p>
-          <p class="mt0 mb0"><strong class="text-warning">3</strong> PTS</p>
           <p class="mt0 mb0"><strong class="text-success">3</strong> PTS</p>
           <p class="mt0 mb0"><strong class="text-info">2</strong> PTS</p>
           <p class="mt0 mb0"><strong class="text-primary">1</strong> PT</p>
@@ -117,30 +109,28 @@
       <!-- STAT -->
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h3>Standings <small class="text-muted"> `B` stands for 'BOOM'</small></h3>
+          <h3>Standings</h3>
 
           <table class="table table-condensed table-bordered">
             <thead>
               <tr>
-                <th>Player</th>                
+                <th>Player</th>
+                <th sort="stat.played">P</th>
                 <th sort="stat.success">S%</th>
-                <th class="text-success" sort="stat.boom">B</th>
-                <th class="text-success" sort="stat.rgd">RD</th>
-                <th class="text-success" sort="stat.spotOn">SO</th>
-                <th class="text-success" sort="stat.gd">GD</th>
-                <th class="text-success" sort="stat.right">W</th>
-                <th class="text-danger" sort="stat.wrong">L</th>
-                <th class="text-warning" sort="stat.forfeit">F</th>
-                <th class="text-primary" sort="stat.PTS">PTS</th>
+                <th sort="stat.spotOn" class="text-success">SO</th>
+                <th sort="stat.gd" class="text-success">GD</th>
+                <th sort="stat.right" class="text-success">W</th>
+                <th sort="stat.wrong" class="text-danger">L</th>
+                <th sort="stat.forfeit" class="text-warning">F</th>
+                <th sort="stat.PTS" class="text-primary">PTS</th>
               </tr>
             </thead>
 
             <tbody>
               <tr ng-repeat="player in playersList | orderBy:sort">
-                <td ng-bind="player.name"></td>                
+                <td ng-bind="player.name"></td>
+                <td ng-bind="player.stat.played"></td>
                 <td ng-bind="player.stat.success"></td>
-                <td ng-bind="player.stat.boom"></td>
-                <td ng-bind="player.stat.rgd"></td>
                 <td ng-bind="player.stat.spotOn"></td>
                 <td ng-bind="player.stat.gd"></td>
                 <td ng-bind="player.stat.right"></td>
@@ -200,7 +190,7 @@
                       ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted palyer-name">Bini</span>
+                        <span class="text-muted">Bini</span>
                       </div>
                     </div>
                   </div>
@@ -228,7 +218,7 @@
                       </div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted palyer-name">Eyassu</span>
+                        <span class="text-muted">Eyassu</span>
                       </div>
                     </div>
                   </div>
@@ -255,7 +245,7 @@
                       ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted palyer-name">Joey</span>
+                        <span class="text-muted">Joey</span>
                       </div>
                     </div>
                   </div>
@@ -282,7 +272,7 @@
                       ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted palyer-name">kaleab</span>
+                        <span class="text-muted">kaleab</span>
                       </div>
                     </div>
                   </div>
@@ -309,7 +299,7 @@
                       ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted palyer-name">Moe</span>
+                        <span class="text-muted">Moe</span>
                       </div>
                     </div>
                   </div>
@@ -336,7 +326,7 @@
                       ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted palyer-name">OG</span>
+                        <span class="text-muted">OG</span>
                       </div>
                     </div>
                   </div>
@@ -363,7 +353,7 @@
                       ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted palyer-name">Yoseph</span>
+                        <span class="text-muted">Yoseph</span>
                       </div>
                     </div>
                   </div>
@@ -424,7 +414,7 @@
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'BOOM': match.pts.bini === 4, 'spot-on': match.pts.bini === 3, 'gd': match.pts.bini === 2, 'win': match.pts.bini === 1, 'lose': match.pts.bini === -1, 'forfeit': match.pts.bini === -2}"
+                        ng-class="{'spot-on': match.pts.bini === 3, 'gd': match.pts.bini === 2, 'win': match.pts.bini === 1, 'lose': match.pts.bini === -1, 'forfeit': match.pts.bini === -2}"
                         ng-bind="match.pts.bini"
                       ></div>
 
@@ -459,7 +449,7 @@
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'BOOM': match.pts.eyassu === 4, 'spot-on': match.pts.eyassu === 3, 'gd': match.pts.eyassu === 2, 'win': match.pts.eyassu === 1, 'lose': match.pts.eyassu === -1, 'forfeit': match.pts.eyassu === -2}"
+                        ng-class="{'spot-on': match.pts.eyassu === 3, 'gd': match.pts.eyassu === 2, 'win': match.pts.eyassu === 1, 'lose': match.pts.eyassu === -1, 'forfeit': match.pts.eyassu === -2}"
                         ng-bind="match.pts.eyassu"
                       ></div>
 
@@ -494,7 +484,7 @@
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'BOOM': match.pts.joey === 4, 'spot-on': match.pts.joey === 3, 'gd': match.pts.joey === 2, 'win': match.pts.joey === 1, 'lose': match.pts.joey === -1, 'forfeit': match.pts.joey === -2}"
+                        ng-class="{'spot-on': match.pts.joey === 3, 'gd': match.pts.joey === 2, 'win': match.pts.joey === 1, 'lose': match.pts.joey === -1, 'forfeit': match.pts.joey === -2}"
                         ng-bind="match.pts.joey"
                       ></div>
 
@@ -511,7 +501,6 @@
               <!-- kaleab -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
-                  <!-- Group Stage -->
                   <div
                     class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
                     ng-bind="match.prediction.kaleab.teamA"
@@ -530,7 +519,7 @@
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'BOOM': match.pts.kaleab === 4, 'spot-on': match.pts.kaleab === 3, 'gd': match.pts.kaleab === 2, 'win': match.pts.kaleab === 1, 'lose': match.pts.kaleab === -1, 'forfeit': match.pts.kaleab === -2}"
+                        ng-class="{'spot-on': match.pts.kaleab === 3, 'gd': match.pts.kaleab === 2, 'win': match.pts.kaleab === 1, 'lose': match.pts.kaleab === -1, 'forfeit': match.pts.kaleab === -2}"
                         ng-bind="match.pts.kaleab"
                       ></div>
 
@@ -547,7 +536,6 @@
               <!-- Moe -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
-                  <!-- Group Stage -->
                   <div
                     class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
                     ng-bind="match.prediction.moe.teamA"
@@ -559,7 +547,6 @@
 
                   <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                     <div class="row">
-                      <!-- group stage -->
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
                         ng-bind="match.prediction.moe.teamB"
@@ -567,7 +554,7 @@
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'BOOM': match.pts.moe === 4, 'spot-on': match.pts.moe === 3, 'gd': match.pts.moe === 2, 'win': match.pts.moe === 1, 'lose': match.pts.moe === -1, 'forfeit': match.pts.moe === -2}"
+                        ng-class="{'spot-on': match.pts.moe === 3, 'gd': match.pts.moe === 2, 'win': match.pts.moe === 1, 'lose': match.pts.moe === -1, 'forfeit': match.pts.moe === -2}"
                         ng-bind="match.pts.moe"
                       ></div>
 
@@ -602,7 +589,7 @@
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'BOOM': match.pts.og === 4, 'spot-on': match.pts.og === 3, 'gd': match.pts.og === 2, 'win': match.pts.og === 1, 'lose': match.pts.og === -1, 'forfeit': match.pts.og === -2}"
+                        ng-class="{'spot-on': match.pts.og === 3, 'gd': match.pts.og === 2, 'win': match.pts.og === 1, 'lose': match.pts.og === -1, 'forfeit': match.pts.og === -2}"
                         ng-bind="match.pts.og"
                       ></div>
 
@@ -637,7 +624,7 @@
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'BOOM': match.pts.yoseph === 4, 'spot-on': match.pts.yoseph === 3, 'gd': match.pts.yoseph === 2, 'win': match.pts.yoseph === 1, 'lose': match.pts.yoseph === -1, 'forfeit': match.pts.yoseph === -2}"
+                        ng-class="{'spot-on': match.pts.yoseph === 3, 'gd': match.pts.yoseph === 2, 'win': match.pts.yoseph === 1, 'lose': match.pts.yoseph === -1, 'forfeit': match.pts.yoseph === -2}"
                         ng-bind="match.pts.yoseph"
                       ></div>
 

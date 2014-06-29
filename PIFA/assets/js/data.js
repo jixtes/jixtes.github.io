@@ -6,6 +6,7 @@ var PIFA = {
       right: 0,
       wrong: 0,
       forfeit: 0,
+      bool: 0,
       PTS: 0
     },
     joey: {
@@ -14,6 +15,7 @@ var PIFA = {
       right: 0,
       wrong: 0,
       forfeit: 0,
+      bool: 0,
       PTS: 0
     },
     kaleab: {
@@ -22,6 +24,7 @@ var PIFA = {
       right: 0,
       wrong: 0,
       forfeit: 0,
+      bool: 0,
       PTS: 0
     },
     moe: {
@@ -30,6 +33,7 @@ var PIFA = {
       right: 0,
       wrong: 0,
       forfeit: 0,
+      bool: 0,
       PTS: 0
     },
     og: {
@@ -38,6 +42,7 @@ var PIFA = {
       right: 0,
       wrong: 0,
       forfeit: 0,
+      bool: 0,
       PTS: 0
     },
     yoseph: {
@@ -46,6 +51,7 @@ var PIFA = {
       right: 0,
       wrong: 0,
       forfeit: 0,
+      bool: 0,
       PTS: 0
     },
     bini: {
@@ -54,10 +60,10 @@ var PIFA = {
       right: 0,
       wrong: 0,
       forfeit: 0,
+      bool: 0,
       PTS: 0
     }
   },
-
 
 
   matches: [
@@ -689,6 +695,7 @@ var PIFA = {
         yoseph: {teamA: 1, teamB: 2}
       }
     },
+
     {
       match: {
         teamA: 'JAP',
@@ -723,12 +730,191 @@ var PIFA = {
         kaleab: {teamA: 0, teamB: 1},
         yoseph: {teamA: 1, teamB: 2}
       }
+    },
+
+    {
+      match: {
+        teamA: 'NIG',
+        scoreA: 2,
+        teamB: 'ARG',
+        scoreB: 3
+      },
+      prediction: {
+        moe: {teamA: 0, teamB: 2},
+        eyassu: {teamA: 0, teamB: 1},
+        bini: {teamA: 0, teamB: 2},
+        joey: {teamA: 0, teamB: 1},
+        og: {teamA: 0, teamB: 2},
+        kaleab: {teamA: 0, teamB: 3},
+        yoseph: {teamA: 1, teamB: 1}
+      }
+    },
+
+    {
+      match: {
+        teamA: 'BOS',
+        scoreA: 3,
+        teamB: 'IRA',
+        scoreB: 1
+      },
+      prediction: {
+        moe: {teamA: 0, teamB: 0},
+        eyassu: {teamA: 1, teamB: 0},
+        bini: {teamA: 1, teamB: 1},
+        joey: {teamA: 1, teamB: 0},
+        og: {teamA: 2, teamB: 0},
+        kaleab: {teamA: 0, teamB: 0},
+        yoseph: {teamA: 1, teamB: 0}
+      }
+    },
+
+    {
+      match: {
+        teamA: 'HON',
+        scoreA: 0,
+        teamB: 'SWI',
+        scoreB: 3
+      },
+      prediction: {
+        moe: {teamA: 0, teamB: 2},
+        eyassu: {teamA: 1, teamB: 3},
+        bini: {teamA: 1, teamB: 2},
+        joey: {teamA: 0, teamB: 1},
+        og: {teamA: 0, teamB: 2},
+        kaleab: {teamA: 0, teamB: 2},
+        yoseph: {teamA: 0, teamB: 1}
+      }
+    },
+
+    {
+      match: {
+        teamA: 'ECU',
+        scoreA: 0,
+        teamB: 'FRA',
+        scoreB: 0
+      },
+      prediction: {
+        moe: {teamA: 1, teamB: 3},
+        eyassu: {teamA: 1, teamB: 3},
+        bini: {teamA: 0, teamB: 2},
+        joey: {teamA: 0, teamB: 2},
+        og: {teamA: 0, teamB: 2},
+        kaleab: {teamA: 1, teamB: 2},
+        yoseph: {teamA: 0, teamB: 2}
+      }
+    },
+
+    {
+      match: {
+        teamA: 'POR',
+        scoreA: 2,
+        teamB: 'GHA',
+        scoreB: 1
+      },
+      prediction: {
+        moe: {teamA: 2, teamB: 3},
+        eyassu: {teamA: 2, teamB: 1},
+        bini: {teamA: 2, teamB: 3},
+        joey: {teamA: 1, teamB: 0},
+        og: {teamA: 2, teamB: 0},
+        kaleab: {teamA: 1, teamB: 0},
+        yoseph: {teamA: 2, teamB: 2}
+      }
+    },
+
+    {
+      match: {
+        teamA: 'USA',
+        scoreA: 0,
+        teamB: 'GER',
+        scoreB: 1
+      },
+      prediction: {
+        moe: {teamA: 1, teamB: 3},
+        eyassu: {teamA: 1, teamB: 3},
+        bini: {teamA: 1, teamB: 3},
+        joey: {teamA: 1, teamB: 2},
+        og: {teamA: 0, teamB: 2},
+        kaleab: {teamA: 0, teamB: 2},
+        yoseph: {teamA: 1, teamB: 3}
+      }
+    },
+
+    {
+      match: {
+        teamA: 'KOR',
+        scoreA: 0,
+        teamB: 'BEL',
+        scoreB: 1
+      },
+      prediction: {
+        moe: {teamA: 0, teamB: 3},
+        eyassu: {teamA: 0, teamB: 3},
+        bini: {teamA: 0, teamB: 4},
+        joey: {teamA: 0, teamB: 2},
+        og: {teamA: 0, teamB: 2},
+        kaleab: {teamA: 0, teamB: 2},
+        yoseph: {teamA: 1, teamB: 3}
+      }
+    },
+
+    {
+      match: {
+        teamA: 'ALG',
+        scoreA: 1,
+        teamB: 'RUS',
+        scoreB: 1
+      },
+      prediction: {
+        moe: {teamA: 2, teamB: 1},
+        eyassu: {teamA: 1, teamB: 1},
+        bini: {teamA: 1, teamB: 2},
+        joey: {teamA: 1, teamB: 1},
+        og: {teamA: 0, teamB: 2},
+        kaleab: {teamA: 0, teamB: 0},
+        yoseph: {teamA: 1, teamB: 2}
+      }
+    },
+
+    {
+      round: true,
+      match: {
+        normal: {
+          teamA: 'A',
+          scoreA: 3,
+          teamB: 'B',
+          scoreB: 2
+        },
+        extraTime: {
+          scoreA: 2,
+          scoreB: 1
+        },
+        pk: {
+          scoreA: 3,
+          scoreB: 0
+        }
+      },
+      prediction: {
+        moe: {
+          normal: {
+            teamA: 0,
+            teamB: 2
+          },
+          extraTime: {
+            teamA: 5,
+            teamB: 4
+          },
+          pk: {
+            teamA: 4,
+            teamB: 5
+          }
+        }
+      },
     }
   ],
 
 
 
   predictions: [
-
   ]
 };
