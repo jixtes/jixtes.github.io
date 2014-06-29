@@ -20,11 +20,17 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
         $scope.matches[match].pts[player] = -2;
       } 
       else {
-        // initialize played
-        if(!$scope.players[player].hasOwnProperty('played'))
-          $scope.players[player].played = 0;  
+        // initialize groupstage and knockoutstage counters
+        if(!$scope.players[player].hasOwnProperty('groupStagePlayed') && !$scope.players[player].hasOwnProperty('knockOutPlayed')) {
+          $scope.players[player].groupStagePlayed = 0;  
+          $scope.players[player].knockOutPlayed = 0;  
+        }
 
-        $scope.players[player].played++;
+        // counting the number of knockout and group stage games
+        if($scope.matches[match].hasOwnProperty('round'))
+          $scope.players[player].knockOutPlayed++;
+        else
+          $scope.players[player].groupStagePlayed++;
 
         if ($scope.matches[match].hasOwnProperty('round') === true &&
                    $scope.matches[match].match.scoreA === $scope.matches[match].prediction[player].teamA &&
@@ -87,10 +93,9 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
   // forgiveness, please
   $scope.playersList = [];
   for (player in $scope.players) {
-    
     // Calculating success rate
     ptsWithoutDeduction = $scope.players[player].PTS + ($scope.players[player].forfeit * 2)+$scope.players[player].wrong;
-    $scope.players[player].success = ptsWithoutDeduction/($scope.players[player].played*3) * 100;
+    $scope.players[player].success = ptsWithoutDeduction/($scope.players[player].groupStagePlayed*3 + $scope.players[player].knockOutPlayed*4) * 100;
     $scope.players[player].success = $scope.players[player].success.toFixed(2)+'%';
 
     $scope.playersList.push({name: player, stat: $scope.players[player]});
