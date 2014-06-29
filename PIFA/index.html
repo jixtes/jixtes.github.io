@@ -662,5 +662,14 @@
     <script src="http://moeduffdude.github.io/PIFA/assets/js/data.js"></script>
     <script src="assets/js/sort.js"></script>
     <script src="assets/js/app.js"></script>
+    <script type="text/javascript">
+    window.addEventListener('load', function (e) {
+      window.applicationCache.addEventListener('updateready', function (e) {
+        if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+          window.location.reload();
+        }
+      }, false);
+    }, false);
+    </script>
   </body>
 </html>

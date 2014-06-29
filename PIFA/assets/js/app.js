@@ -1,11 +1,3 @@
-window.addEventListener('load', function (e) {
-  window.applicationCache.addEventListener('updateready', function (e) {
-    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-      window.location.reload();
-    }
-  }, false);
-}, false);
-
 var app = angular.module('PIFA', ['sort_column']);
 
 app.controller('PIFACtrl', ['$scope', function ($scope) {
