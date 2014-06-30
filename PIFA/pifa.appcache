@@ -1,5 +1,6 @@
 CACHE MANIFEST
-# Rev 0.1.1
+# Rev 0.1.2
+# CostEurika
 
 CACHE:
 assets/angular/angular.min.js
@@ -8,7 +9,6 @@ assets/bs3/fonts/glyphicons-halflings-regular.eot
 assets/bs3/fonts/glyphicons-halflings-regular.svg
 assets/bs3/fonts/glyphicons-halflings-regular.ttf
 assets/bs3/fonts/glyphicons-halflings-regular.woff
-
 assets/js/app.js
 assets/js/sort.js
 
