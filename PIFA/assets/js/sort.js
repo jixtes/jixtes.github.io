@@ -43,7 +43,7 @@ app.directive('sort', function($timeout,sortService) {
 
 					// Set Sorting predicate
 					negate = (order=="desc") ? '-':'';
-					scope.sort = [negate+attrs.sort]
+					scope.sort = [negate+attrs.sort,'-stat.success']
 					
 				})
 			})
