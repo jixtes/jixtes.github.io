@@ -21,16 +21,10 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
       } 
       else {
         // initialize groupstage and knockoutstage counters
-        if(!$scope.players[player].hasOwnProperty('groupStagePlayed') && !$scope.players[player].hasOwnProperty('knockOutPlayed')) {
-          $scope.players[player].groupStagePlayed = 0;  
-          $scope.players[player].knockOutPlayed = 0;  
+        if(!$scope.players[player].hasOwnProperty('threePtGame') && !$scope.players[player].hasOwnProperty('fourPtGame')) {
+          $scope.players[player].threePtGame = 0;  
+          $scope.players[player].fourPtGame = 0;  
         }
-
-        // counting the number of knockout and group stage games
-        if($scope.matches[match].hasOwnProperty('round'))
-          $scope.players[player].knockOutPlayed++;
-        else
-          $scope.players[player].groupStagePlayed++;
 
         if ($scope.matches[match].hasOwnProperty('round') === true &&
                    $scope.matches[match].match.scoreA === $scope.matches[match].prediction[player].teamA &&
@@ -40,6 +34,9 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
           // Second stage and on
           // SPOT-ON DRAW
           // 4PTS
+
+          $scope.players[player].fourPtGame++;
+
           $scope.players[player].PTS += 4;
           $scope.players[player].boom++;
           $scope.matches[match].pts[player] = 4;
@@ -49,39 +46,47 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
             // Second stage and on
             // GD draw
             // 3PTS
+
+            $scope.players[player].fourPtGame++;
+
             $scope.players[player].PTS += 3;
             $scope.players[player].rgd++;
             $scope.matches[match].pts[player] = 3;
-        } else if (($scope.matches[match].match.scoreA === $scope.matches[match].prediction[player].teamA) &&
-                   ($scope.matches[match].match.scoreB === $scope.matches[match].prediction[player].teamB)) {
-          // after here everything goes as planned
-
-          // spot on prediction
-          $scope.players[player].PTS += 3;
-          $scope.players[player].spotOn++;
-          $scope.matches[match].pts[player] = 3;
-        } else if (($scope.matches[match].match.scoreA > $scope.matches[match].match.scoreB) ===
-                   ($scope.matches[match].prediction[player].teamA > $scope.matches[match].prediction[player].teamB) &&
-                   ($scope.matches[match].match.scoreA < $scope.matches[match].match.scoreB) ===
-                   ($scope.matches[match].prediction[player].teamA < $scope.matches[match].prediction[player].teamB)) {
-          // side prediction
-
-          // goal difference
-          if (($scope.matches[match].match.scoreA - $scope.matches[match].match.scoreB) ===
-              ($scope.matches[match].prediction[player].teamA - $scope.matches[match].prediction[player].teamB)) {
-            $scope.players[player].PTS += 2;
-            $scope.players[player].gd++;
-            $scope.matches[match].pts[player] = 2;
-          } else {
-            $scope.players[player].PTS += 1;
-            $scope.players[player].right++;
-            $scope.matches[match].pts[player] = 1;
-          }
         } else {
-          // wrong prediction
-          $scope.players[player].PTS -= 1;
-          $scope.players[player].wrong++;
-          $scope.matches[match].pts[player] = -1;
+
+          $scope.players[player].threePtGame++;
+
+          if (($scope.matches[match].match.scoreA === $scope.matches[match].prediction[player].teamA) &&
+                 ($scope.matches[match].match.scoreB === $scope.matches[match].prediction[player].teamB)) {
+            // after here everything goes as planned
+
+            // spot on prediction
+            $scope.players[player].PTS += 3;
+            $scope.players[player].spotOn++;
+            $scope.matches[match].pts[player] = 3;
+          } else if (($scope.matches[match].match.scoreA > $scope.matches[match].match.scoreB) ===
+                     ($scope.matches[match].prediction[player].teamA > $scope.matches[match].prediction[player].teamB) &&
+                     ($scope.matches[match].match.scoreA < $scope.matches[match].match.scoreB) ===
+                     ($scope.matches[match].prediction[player].teamA < $scope.matches[match].prediction[player].teamB)) {
+            // side prediction
+
+            // goal difference
+            if (($scope.matches[match].match.scoreA - $scope.matches[match].match.scoreB) ===
+                ($scope.matches[match].prediction[player].teamA - $scope.matches[match].prediction[player].teamB)) {
+              $scope.players[player].PTS += 2;
+              $scope.players[player].gd++;
+              $scope.matches[match].pts[player] = 2;
+            } else {
+              $scope.players[player].PTS += 1;
+              $scope.players[player].right++;
+              $scope.matches[match].pts[player] = 1;
+            }
+          } else {
+            // wrong prediction
+            $scope.players[player].PTS -= 1;
+            $scope.players[player].wrong++;
+            $scope.matches[match].pts[player] = -1;
+          }
         }
       }
     }
@@ -95,7 +100,7 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
   for (player in $scope.players) {
     // Calculating success rate
     ptsWithoutDeduction = $scope.players[player].PTS + ($scope.players[player].forfeit * 2)+$scope.players[player].wrong;
-    $scope.players[player].success = ptsWithoutDeduction/($scope.players[player].groupStagePlayed*3 + $scope.players[player].knockOutPlayed*4) * 100;
+    $scope.players[player].success = ptsWithoutDeduction/($scope.players[player].threePtGame*3 + $scope.players[player].fourPtGame*4) * 100;
     $scope.players[player].success = $scope.players[player].success.toFixed(2)+'%';
 
     $scope.playersList.push({name: player, stat: $scope.players[player]});
