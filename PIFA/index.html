@@ -235,12 +235,12 @@
                 </div>
               </p>
 
-              <!-- Joey -->
+              <!-- jiks -->
               <p class="list-group-item-text text-muted">
-                <div class="row" ng-hide="prediction.prediction.joey === undefined">
+                <div class="row" ng-hide="prediction.prediction.jiks === undefined">
                   <div
                     class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
-                    ng-bind="prediction.prediction.joey.teamA"
+                    ng-bind="prediction.prediction.jiks.teamA"
                   ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
@@ -251,11 +251,11 @@
                     <div class="row">
                       <div
                         class="col-lg-1 col-md-1 col-sm-1 col-xs-1"
-                        ng-bind="prediction.prediction.joey.teamB"
+                        ng-bind="prediction.prediction.jiks.teamB"
                       ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted palyer-name">Joey</span>
+                        <span class="text-muted palyer-name">jiks</span>
                       </div>
                     </div>
                   </div>
@@ -289,12 +289,12 @@
                 </div>
               </p>
 
-              <!-- Moe -->
+              <!-- chomaRas -->
               <p class="list-group-item-text text-muted">
-                <div class="row" ng-hide="prediction.prediction.moe === undefined">
+                <div class="row" ng-hide="prediction.prediction.chomaRas === undefined">
                   <div
                     class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
-                    ng-bind="prediction.prediction.moe.teamA"
+                    ng-bind="prediction.prediction.chomaRas.teamA"
                   ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
@@ -305,11 +305,11 @@
                     <div class="row">
                       <div
                         class="col-lg-1 col-md-1 col-sm-1 col-xs-1"
-                        ng-bind="prediction.prediction.moe.teamB"
+                        ng-bind="prediction.prediction.chomaRas.teamB"
                       ></div>
 
                       <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                        <span class="text-muted palyer-name">Moe</span>
+                        <span class="text-muted palyer-name">chomaRas</span>
                       </div>
                     </div>
                   </div>
@@ -473,12 +473,12 @@
 
 
 
-              <!-- Joey -->
+              <!-- jiks -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
                   <div
                     class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
-                    ng-bind="match.prediction.joey.teamA"
+                    ng-bind="match.prediction.jiks.teamA"
                   ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
@@ -489,17 +489,17 @@
                     <div class="row">
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
-                        ng-bind="match.prediction.joey.teamB"
+                        ng-bind="match.prediction.jiks.teamB"
                       ></div>
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'BOOM': match.pts.joey === 4, 'spot-on': match.pts.joey === 3, 'gd': match.pts.joey === 2, 'win': match.pts.joey === 1, 'lose': match.pts.joey === -1, 'forfeit': match.pts.joey === -2}"
-                        ng-bind="match.pts.joey"
+                        ng-class="{'BOOM': match.pts.jiks === 4, 'spot-on': match.pts.jiks === 3, 'gd': match.pts.jiks === 2, 'win': match.pts.jiks === 1, 'lose': match.pts.jiks === -1, 'forfeit': match.pts.jiks === -2}"
+                        ng-bind="match.pts.jiks"
                       ></div>
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
-                        <span class="text-muted palyer-name">Joey</span>
+                        <span class="text-muted palyer-name">jiks</span>
                       </div>
                     </div>
                   </div>
@@ -544,13 +544,13 @@
 
 
 
-              <!-- Moe -->
+              <!-- chomaRas -->
               <p class="list-group-item-text text-muted">
                 <div class="row">
                   <!-- Group Stage -->
                   <div
                     class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right"
-                    ng-bind="match.prediction.moe.teamA"
+                    ng-bind="match.prediction.chomaRas.teamA"
                   ></div>
 
                   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
@@ -562,17 +562,17 @@
                       <!-- group stage -->
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left"
-                        ng-bind="match.prediction.moe.teamB"
+                        ng-bind="match.prediction.chomaRas.teamB"
                       ></div>
 
                       <div
                         class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center pts"
-                        ng-class="{'BOOM': match.pts.moe === 4, 'spot-on': match.pts.moe === 3, 'gd': match.pts.moe === 2, 'win': match.pts.moe === 1, 'lose': match.pts.moe === -1, 'forfeit': match.pts.moe === -2}"
-                        ng-bind="match.pts.moe"
+                        ng-class="{'BOOM': match.pts.chomaRas === 4, 'spot-on': match.pts.chomaRas === 3, 'gd': match.pts.chomaRas === 2, 'win': match.pts.chomaRas === 1, 'lose': match.pts.chomaRas === -1, 'forfeit': match.pts.chomaRas === -2}"
+                        ng-bind="match.pts.chomaRas"
                       ></div>
 
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
-                        <span class="text-muted palyer-name">Moe</span>
+                        <span class="text-muted palyer-name">chomaRas</span>
                       </div>
                     </div>
                   </div>
