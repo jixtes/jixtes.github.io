@@ -1160,7 +1160,7 @@ var PIFA = {
       prediction: {
         chomaRas: {teamA: 0, teamB: 0},
         eyassu: {teamA: 1, teamB: 1},
-        bini: {teamA: 1, teamB: 2},
+        bini: {teamA: 0, teamB: 0},
         jiks: {teamA: 0, teamB: 1},
         og: {teamA: 1, teamB: 1},
         kaleab: {teamA: 0, teamB: 0},
