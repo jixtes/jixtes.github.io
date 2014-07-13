@@ -109,4 +109,5 @@ app.controller('PIFACtrl', ['$scope', function ($scope) {
 
 app.service('sortService', function() {
   this.sortOrder = ['-stat.PTS','-stat.boom','-stat.rgd','-stat.spotOn','-stat.gd','-stat.right','stat.wrong','stat.forfeit',];
+  this.secondarySort = 'stat.success';
 })

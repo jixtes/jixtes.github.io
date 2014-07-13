@@ -1,6 +1,6 @@
 CACHE MANIFEST
-# Rev 0.2.1
-# CostEurika
+# Rev 0.3.2
+#
 
 CACHE:
 assets/angular/angular.min.js
@@ -13,4 +13,4 @@ assets/js/app.js
 assets/js/sort.js
 
 NETWORK:
-http://moeduffdude.github.io/PIFA/assets/js/data.js
+*
