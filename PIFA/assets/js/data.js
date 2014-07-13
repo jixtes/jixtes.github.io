@@ -1166,12 +1166,7 @@ var PIFA = {
         kaleab: {teamA: 0, teamB: 0},
         yoseph: {teamA: 2, teamB: 1}
       }
-    }
-  ],
-
-
-
-  predictions: [
+    },
     {
       round: 'MeganFox',
       match: {
@@ -1181,16 +1176,20 @@ var PIFA = {
         scoreB: 0
       },
       prediction: {
-        /*
-        chomaRas: {teamA: 1, teamB: 0},
-        eyassu: {teamA: 0, teamB: 0},
+        chomaRas: {teamA: 0, teamB: 1},
+        eyassu: {teamA: 1, teamB: 0},
         bini: {teamA: 2, teamB: 0},
-        jiks: {teamA: 2, teamB: 0},
-        og: {teamA: 2, teamB: 0},
+        jiks: {teamA: 0, teamB: 0},
+        og: {teamA: 1, teamB: 0},
         kaleab: {teamA: 0, teamB: 0},
-        yoseph: {teamA: 2, teamB: 0}
-        */
+        yoseph: {teamA: 2, teamB: 1}
       }
     }
+  ],
+
+
+
+  predictions: [
+
   ]
 };
