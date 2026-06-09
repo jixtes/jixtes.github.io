@@ -1,29 +1,692 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta name="keywords" content="moeduffdude, moeduffdude github" />
-        <meta name="description" content="Moe Szyslack's GitHub io page" />
-        <meta name="robots" content="index, follow" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jigsa Tesfaye Bulto is a machine learning and data engineer specializing in production AI, GenAI, RAG, GraphRAG, and scalable data platforms.">
+  <meta name="theme-color" content="#101312">
+  <title>Jigsa Tesfaye Bulto | ML &amp; Data Engineer</title>
+  <style>
+    :root {
+      --ink: #101312;
+      --muted: #5d625f;
+      --paper: #f5f3ed;
+      --card: #fffdf8;
+      --line: #d8d6cf;
+      --accent: #c8ff32;
+      --max-width: 1120px;
+    }
 
-        <title>Jiksa Tesfaye Profile</title>
-        <style type="text/css">
-            a {
-                text-decoration: none;
-            }   
-            body {
-               font-size: 20px;
-            }
-        </style>
-    </head>
+    * {
+      box-sizing: border-box;
+    }
 
-    <body>
-        <!-- Check out some demo pages. -->
-        <ul>
-            <li><a href="PIFA">PIFA [ *** Whooooooooo!!! I AM THE CHAMPION *** ]</a>   </li>
-        </ul>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    </body>
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration-color: var(--accent);
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      border-bottom: 1px solid rgba(216, 214, 207, .85);
+      background: rgba(245, 243, 237, .9);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .mark {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      text-decoration: none;
+    }
+
+    .mark span {
+      display: inline-grid;
+      width: 34px;
+      height: 34px;
+      margin-right: 9px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: .9rem;
+      font-weight: 650;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(250px, .5fr);
+      align-items: center;
+      gap: 64px;
+      padding-block: 88px;
+    }
+
+    .eyebrow,
+    .section-label {
+      margin: 0 0 20px;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .eyebrow::before {
+      width: 9px;
+      height: 9px;
+      content: "";
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(200, 255, 50, .22);
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(3.3rem, 8vw, 7.4rem);
+      font-weight: 800;
+      letter-spacing: -.075em;
+      line-height: .9;
+    }
+
+    h1 span {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--ink);
+    }
+
+    .hero-copy {
+      max-width: 740px;
+      margin: 34px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 36px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      font-weight: 750;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .button.primary:hover {
+      background: #292d2b;
+    }
+
+    .hero-meta {
+      display: grid;
+      gap: 28px;
+      padding-left: 30px;
+      border-left: 1px solid var(--line);
+    }
+
+    .meta-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: .73rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .meta-item span {
+      color: var(--muted);
+    }
+
+    section {
+      scroll-margin-top: 92px;
+      padding-block: 104px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 64px;
+    }
+
+    h2 {
+      max-width: 850px;
+      margin: 0 0 30px;
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      letter-spacing: -.055em;
+      line-height: 1.06;
+    }
+
+    .lead {
+      max-width: 800px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.3rem);
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 34px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tech-list li {
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 253, 248, .65);
+      font-size: .88rem;
+      font-weight: 650;
+    }
+
+    .timeline {
+      display: grid;
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 170px minmax(0, 1fr);
+      gap: 24px;
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .role:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .role time {
+      color: var(--muted);
+      font-size: .87rem;
+      font-weight: 650;
+    }
+
+    .role h3 {
+      margin: 0 0 4px;
+      font-size: 1.3rem;
+      letter-spacing: -.025em;
+    }
+
+    .company {
+      margin: 0 0 12px;
+      font-weight: 700;
+    }
+
+    .role p:last-child {
+      max-width: 720px;
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+    }
+
+    .card-number {
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+    }
+
+    .card h3 {
+      margin: auto 0 12px;
+      font-size: 1.35rem;
+      letter-spacing: -.03em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card-link {
+      margin-top: 20px;
+      font-weight: 750;
+    }
+
+    .education {
+      display: grid;
+      gap: 0;
+    }
+
+    .degree {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      padding: 23px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .degree:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .degree h3 {
+      margin: 0 0 4px;
+      font-size: 1.08rem;
+    }
+
+    .degree p,
+    .degree time {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .contact {
+      background: var(--ink);
+      color: white;
+    }
+
+    .contact .section-label,
+    .contact .lead {
+      color: #bfc3c0;
+    }
+
+    .contact h2 {
+      max-width: 760px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 34px;
+      color: var(--accent);
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      font-weight: 750;
+      letter-spacing: -.035em;
+    }
+
+    footer {
+      padding-block: 26px;
+      background: var(--ink);
+      color: #9ca19e;
+      font-size: .82rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding-top: 26px;
+      border-top: 1px solid #303432;
+    }
+
+    @media (max-width: 780px) {
+      .nav-links a:not(:last-child) {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding-block: 72px;
+      }
+
+      .hero-meta {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 28px 0 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      section {
+        padding-block: 76px;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .role {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .degree {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main navigation">
+      <a class="mark" href="#top" aria-label="Jigsa Tesfaye Bulto, home">
+        <span>JT</span> Jigsa Tesfaye Bulto
+      </a>
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#work">Selected work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="container hero">
+      <div>
+        <p class="eyebrow">ML Engineer · Data Engineer · Eindhoven, NL</p>
+        <h1>Building AI that <span>works.</span></h1>
+        <p class="hero-copy">
+          I design and ship production-oriented AI systems, from GenAI and GraphRAG
+          pipelines to data platforms, APIs, and cloud infrastructure.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:jiks.tes@gmail.com">Get in touch</a>
+          <a class="button" href="#work">View my work</a>
+        </div>
+      </div>
+      <aside class="hero-meta" aria-label="Profile highlights">
+        <div class="meta-item">
+          <strong>Current role</strong>
+          <span>Data Engineer at IFC</span>
+        </div>
+        <div class="meta-item">
+          <strong>Focus</strong>
+          <span>GenAI, RAG &amp; GraphRAG</span>
+        </div>
+        <div class="meta-item">
+          <strong>Education</strong>
+          <span>EngD in Data Science</span>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="container section-grid">
+        <p class="section-label">Profile</p>
+        <div>
+          <h2>From research prototypes to reliable production systems.</h2>
+          <p class="lead">
+            I am a machine learning engineer with an Engineering Doctorate from
+            Eindhoven University of Technology. My background spans AI engineering,
+            data engineering, full-stack development, and technical leadership across
+            Europe and Africa.
+          </p>
+          <ul class="tech-list" aria-label="Core technologies">
+            <li>Python</li>
+            <li>GenAI</li>
+            <li>RAG / GraphRAG</li>
+            <li>LangGraph</li>
+            <li>Neo4j</li>
+            <li>FastAPI</li>
+            <li>Azure</li>
+            <li>AWS</li>
+            <li>Docker</li>
+            <li>REST APIs</li>
+            <li>ETL</li>
+            <li>SQL</li>
+            <li>React</li>
+            <li>CI/CD</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container section-grid">
+        <p class="section-label">Experience</p>
+        <div class="timeline">
+          <article class="role">
+            <time datetime="2026-03">Mar 2026 — Present</time>
+            <div>
+              <h3>Data Engineer</h3>
+              <p class="company">IFC · World Bank Group</p>
+              <p>
+                Refactoring and scaling an ETL pipeline while developing a web-based
+                data portal that brings together data services, Power BI reporting,
+                and SharePoint storage for multiple user groups.
+              </p>
+            </div>
+          </article>
+
+          <article class="role">
+            <time datetime="2025-02">Feb 2025 — Mar 2026</time>
+            <div>
+              <h3>GenAI &amp; GraphRAG Engineer · EngD Final Project</h3>
+              <p class="company">KPN</p>
+              <p>
+                Designed a GenAI pipeline for ontology-aligned knowledge graph
+                construction from unstructured documents. Built scalable ingestion,
+                retrieval, evaluation, and validation workflows with Python,
+                LangGraph, and Neo4j.
+              </p>
+            </div>
+          </article>
+
+          <article class="role">
+            <time datetime="2024-01">Jan 2024 — Jan 2025</time>
+            <div>
+              <h3>Data Scientist · EngD Traineeship</h3>
+              <p class="company">Jheronimus Academy of Data Science</p>
+              <p>
+                Delivered applied data science projects in energy-price forecasting,
+                climate impact on agricultural yield, and atrial fibrillation
+                detection from ECG signals.
+              </p>
+            </div>
+          </article>
+
+          <article class="role">
+            <time datetime="2014-07">2014 — 2023</time>
+            <div>
+              <h3>Technical Lead &amp; Full-Stack Developer</h3>
+              <p class="company">Farm Radio International</p>
+              <p>
+                Progressed from developer to technical team lead, building project
+                data systems, REST APIs, reporting tools, and digital services used
+                by 550+ radio stations across 18 African countries.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container section-grid">
+        <p class="section-label">Selected work</p>
+        <div class="cards">
+          <article class="card">
+            <span class="card-number">01 · GENAI</span>
+            <h3>Knowledge Graph Generation for GraphRAG</h3>
+            <p>
+              An enterprise pipeline for extracting entities from documents,
+              constructing ontology-aligned graphs, and improving semantic retrieval.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-number">02 · DATA PLATFORM</span>
+            <h3>Integrated Data Management Portal</h3>
+            <p>
+              A modular portal connecting ETL services, dashboards, and document
+              storage to make organizational data easier to access and manage.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-number">03 · DIGITAL DELIVERY</span>
+            <h3>Global Project &amp; Results Systems</h3>
+            <p>
+              Web applications, APIs, and reporting tools supporting distributed
+              programs and teams across 18 countries.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-number">04 · WEB EXPERIMENT</span>
+            <h3>PIFA Tournament App</h3>
+            <p>
+              A lightweight browser application for viewing and navigating football
+              tournament fixtures and results.
+            </p>
+            <a class="card-link" href="PIFA/">Open project →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container section-grid">
+        <p class="section-label">Education</p>
+        <div class="education">
+          <article class="degree">
+            <div>
+              <h3>Engineering Doctorate in Data Science</h3>
+              <p>Eindhoven University of Technology · Grade 8/10</p>
+            </div>
+            <time>2024 — 2026</time>
+          </article>
+          <article class="degree">
+            <div>
+              <h3>MSc in Computer Science</h3>
+              <p>HilCoE College of Computer Science · GPA 4.0</p>
+            </div>
+            <time>2015 — 2018</time>
+          </article>
+          <article class="degree">
+            <div>
+              <h3>BSc in Computer Science</h3>
+              <p>Addis Ababa University</p>
+            </div>
+            <time>2009 — 2013</time>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container section-grid">
+        <p class="section-label">Contact</p>
+        <div>
+          <h2>Let’s build something useful.</h2>
+          <p class="lead">
+            I’m interested in ambitious AI and data engineering work where thoughtful
+            system design matters as much as the model.
+          </p>
+          <a class="contact-link" href="mailto:jiks.tes@gmail.com">jiks.tes@gmail.com →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Jigsa Tesfaye Bulto</span>
+      <span>Designed and built as a single, fast page.</span>
+    </div>
+  </footer>
+</body>
 </html>
